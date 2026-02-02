@@ -1,0 +1,1247 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1EFD0B42F30A17200B95BCD /* JY_SandboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0222F30A17200B95BCD /* JY_SandboxManager.swift */; };
+		A1EFD0B52F30A17200B95BCD /* JY_VerifyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0902F30A17200B95BCD /* JY_VerifyTextField.swift */; };
+		A1EFD0B62F30A17200B95BCD /* JY_AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD01A2F30A17200B95BCD /* JY_AuthorizationManager.swift */; };
+		A1EFD0B72F30A17200B95BCD /* JY_Video_Player_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0562F30A17200B95BCD /* JY_Video_Player_State.swift */; };
+		A1EFD0B82F30A17200B95BCD /* JY_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD06D2F30A17200B95BCD /* JY_UIImage.swift */; };
+		A1EFD0B92F30A17200B95BCD /* JY_Video_Preload_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0612F30A17200B95BCD /* JY_Video_Preload_Manager.swift */; };
+		A1EFD0BA2F30A17200B95BCD /* JY_IAPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0132F30A17200B95BCD /* JY_IAPConfig.swift */; };
+		A1EFD0BB2F30A17200B95BCD /* JY_WKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0942F30A17200B95BCD /* JY_WKWebView.swift */; };
+		A1EFD0BC2F30A17200B95BCD /* JYExtension + AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD05A2F30A17200B95BCD /* JYExtension + AVPlayerItem.swift */; };
+		A1EFD0BD2F30A17200B95BCD /* JY_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD06B2F30A17200B95BCD /* JY_String.swift */; };
+		A1EFD0BE2F30A17200B95BCD /* JY_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD06C2F30A17200B95BCD /* JY_UIColor.swift */; };
+		A1EFD0BF2F30A17200B95BCD /* JY_ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0202F30A17200B95BCD /* JY_ProjectManager.swift */; };
+		A1EFD0C02F30A17200B95BCD /* JY_LoadingHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD07F2F30A17200B95BCD /* JY_LoadingHUD.swift */; };
+		A1EFD0C12F30A17200B95BCD /* JY_TextPaginationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD07A2F30A17200B95BCD /* JY_TextPaginationTool.swift */; };
+		A1EFD0C22F30A17200B95BCD /* JY_Video_Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD05F2F30A17200B95BCD /* JY_Video_Loader.swift */; };
+		A1EFD0C32F30A17200B95BCD /* JYExtension + Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD05B2F30A17200B95BCD /* JYExtension + Double.swift */; };
+		A1EFD0C42F30A17200B95BCD /* JY_Scroll_PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0482F30A17200B95BCD /* JY_Scroll_PageController.swift */; };
+		A1EFD0C52F30A17200B95BCD /* JY_NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0442F30A17200B95BCD /* JY_NavigationController.swift */; };
+		A1EFD0C62F30A17200B95BCD /* JY_JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0182F30A17200B95BCD /* JY_JsonUtils.swift */; };
+		A1EFD0C72F30A17200B95BCD /* JY_Base_MineMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0852F30A17200B95BCD /* JY_Base_MineMessageCell.swift */; };
+		A1EFD0C82F30A17200B95BCD /* JY_PageTurningMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0762F30A17200B95BCD /* JY_PageTurningMode.swift */; };
+		A1EFD0C92F30A17200B95BCD /* JY_Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0112F30A17200B95BCD /* JY_Int.swift */; };
+		A1EFD0CA2F30A17200B95BCD /* JY_Base_MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0842F30A17200B95BCD /* JY_Base_MineCell.swift */; };
+		A1EFD0CB2F30A17200B95BCD /* JY_ContactTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD08D2F30A17200B95BCD /* JY_ContactTextField.swift */; };
+		A1EFD0CC2F30A17200B95BCD /* JY_Video_Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD05E2F30A17200B95BCD /* JY_Video_Info.swift */; };
+		A1EFD0CD2F30A17200B95BCD /* JY_TimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD02F2F30A17200B95BCD /* JY_TimeTool.swift */; };
+		A1EFD0CE2F30A17200B95BCD /* JY_BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD07C2F30A17200B95BCD /* JY_BaseCell.swift */; };
+		A1EFD0CF2F30A17200B95BCD /* JYClipImageRatioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD03B2F30A17200B95BCD /* JYClipImageRatioCell.swift */; };
+		A1EFD0D02F30A17200B95BCD /* JY_Video_Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0522F30A17200B95BCD /* JY_Video_Downloader.swift */; };
+		A1EFD0D12F30A17200B95BCD /* JY_Video_Player_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD04F2F30A17200B95BCD /* JY_Video_Player_Controller.swift */; };
+		A1EFD0D22F30A17200B95BCD /* JY_PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD08E2F30A17200B95BCD /* JY_PhoneTextField.swift */; };
+		A1EFD0D32F30A17200B95BCD /* JY_Video_Cache_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD04D2F30A17200B95BCD /* JY_Video_Cache_Manager.swift */; };
+		A1EFD0D42F30A17200B95BCD /* JYClipImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0362F30A17200B95BCD /* JYClipImageController.swift */; };
+		A1EFD0D52F30A17200B95BCD /* JY_UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD06F2F30A17200B95BCD /* JY_UIWindow.swift */; };
+		A1EFD0D62F30A17200B95BCD /* JY_InAppPurchasesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0152F30A17200B95BCD /* JY_InAppPurchasesManager.swift */; };
+		A1EFD0D72F30A17200B95BCD /* JYExtension + AVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0592F30A17200B95BCD /* JYExtension + AVPlayer.swift */; };
+		A1EFD0D82F30A17200B95BCD /* JYClipImageRatioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0392F30A17200B95BCD /* JYClipImageRatioModel.swift */; };
+		A1EFD0D92F30A17200B95BCD /* JY_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD08F2F30A17200B95BCD /* JY_TextField.swift */; };
+		A1EFD0DA2F30A17200B95BCD /* JY_Video_Loader_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0602F30A17200B95BCD /* JY_Video_Loader_Manager.swift */; };
+		A1EFD0DB2F30A17200B95BCD /* JY_Video_Downloader_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0532F30A17200B95BCD /* JY_Video_Downloader_Handler.swift */; };
+		A1EFD0DC2F30A17200B95BCD /* JY_DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD00F2F30A17200B95BCD /* JY_DateTool.swift */; };
+		A1EFD0DD2F30A17200B95BCD /* JY_SystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0252F30A17200B95BCD /* JY_SystemManager.swift */; };
+		A1EFD0DE2F30A17200B95BCD /* JY_PagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0472F30A17200B95BCD /* JY_PagerController.swift */; };
+		A1EFD0DF2F30A17200B95BCD /* JY_InAppPurchasesManager + Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0162F30A17200B95BCD /* JY_InAppPurchasesManager + Enum.swift */; };
+		A1EFD0E02F30A17200B95BCD /* JY_NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD01E2F30A17200B95BCD /* JY_NetworkManager.swift */; };
+		A1EFD0E12F30A17200B95BCD /* JY_PageCurl_PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0462F30A17200B95BCD /* JY_PageCurl_PageController.swift */; };
+		A1EFD0E22F30A17200B95BCD /* JYClipImageBottomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD03D2F30A17200B95BCD /* JYClipImageBottomNavigationBar.swift */; };
+		A1EFD0E32F30A17200B95BCD /* JY_UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD06E2F30A17200B95BCD /* JY_UIView.swift */; };
+		A1EFD0E42F30A17200B95BCD /* JY_TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0282F30A17200B95BCD /* JY_TimerManager.swift */; };
+		A1EFD0E52F30A17200B95BCD /* JY_DeviceTool + UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0692F30A17200B95BCD /* JY_DeviceTool + UUID.swift */; };
+		A1EFD0E62F30A17200B95BCD /* JY_ProjectTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD02D2F30A17200B95BCD /* JY_ProjectTool.swift */; };
+		A1EFD0E72F30A17200B95BCD /* JYClipImageController + Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0372F30A17200B95BCD /* JYClipImageController + Interaction.swift */; };
+		A1EFD0E82F30A17200B95BCD /* JY_LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD01C2F30A17200B95BCD /* JY_LocalizationManager.swift */; };
+		A1EFD0E92F30A17200B95BCD /* JY_Video_Download_Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0512F30A17200B95BCD /* JY_Video_Download_Info.swift */; };
+		A1EFD0EA2F30A17200B95BCD /* JYExtension + URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD05C2F30A17200B95BCD /* JYExtension + URL.swift */; };
+		A1EFD0EB2F30A17200B95BCD /* JYClipOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0402F30A17200B95BCD /* JYClipOverlayView.swift */; };
+		A1EFD0EC2F30A17200B95BCD /* JY_TipHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0812F30A17200B95BCD /* JY_TipHUD.swift */; };
+		A1EFD0ED2F30A17200B95BCD /* JY_Video_Downloader_Session_Delegate_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0542F30A17200B95BCD /* JY_Video_Downloader_Session_Delegate_Handler.swift */; };
+		A1EFD0EE2F30A17200B95BCD /* JY_ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0782F30A17200B95BCD /* JY_ScreenManager.swift */; };
+		A1EFD0EF2F30A17200B95BCD /* JY_SemicircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0872F30A17200B95BCD /* JY_SemicircleView.swift */; };
+		A1EFD0F02F30A17200B95BCD /* JYClipImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD03F2F30A17200B95BCD /* JYClipImageView.swift */; };
+		A1EFD0F12F30A17200B95BCD /* JYAnimationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0342F30A17200B95BCD /* JYAnimationUtils.swift */; };
+		A1EFD0F22F30A17200B95BCD /* JY_Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD08B2F30A17200B95BCD /* JY_Slider.swift */; };
+		A1EFD0F32F30A17200B95BCD /* JY_Video_Cache_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD04C2F30A17200B95BCD /* JY_Video_Cache_Handler.swift */; };
+		A1EFD0F42F30A17200B95BCD /* JY_Base_SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0892F30A17200B95BCD /* JY_Base_SettingCell.swift */; };
+		A1EFD0F52F30A17200B95BCD /* JY_IAPTransactionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0142F30A17200B95BCD /* JY_IAPTransactionRecord.swift */; };
+		A1EFD0F62F30A17200B95BCD /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0742F30A17200B95BCD /* UITextView+Placeholder.m */; };
+		A1EFD0F72F30A17200B95BCD /* JY_BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0322F30A17200B95BCD /* JY_BaseController.swift */; };
+		A1EFD0F82F30A17200B95BCD /* JY_SandboxManager + Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0232F30A17200B95BCD /* JY_SandboxManager + Image.swift */; };
+		A1EFD0F92F30A17200B95BCD /* JY_Video_Request_Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0622F30A17200B95BCD /* JY_Video_Request_Loader.swift */; };
+		A1EFD0FA2F30A17200B95BCD /* JY_CommonCryptoTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD00D2F30A17200B95BCD /* JY_CommonCryptoTool.swift */; };
+		A1EFD0FB2F30A17200B95BCD /* JY_Video_Cache_Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD04A2F30A17200B95BCD /* JY_Video_Cache_Action.swift */; };
+		A1EFD0FC2F30A17200B95BCD /* JY_DecimalMoneyTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD02B2F30A17200B95BCD /* JY_DecimalMoneyTool.swift */; };
+		A1EFD0FD2F30A17200B95BCD /* JY_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD07D2F30A17200B95BCD /* JY_View.swift */; };
+		A1EFD0FE2F30A17200B95BCD /* JY_ContentTextView_TextCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0922F30A17200B95BCD /* JY_ContentTextView_TextCount.swift */; };
+		A1EFD0FF2F30A17200B95BCD /* JY_DeviceTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0682F30A17200B95BCD /* JY_DeviceTool.swift */; };
+		A1EFD1002F30A17200B95BCD /* JYExtension + AVAssetResourceLoadingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0582F30A17200B95BCD /* JYExtension + AVAssetResourceLoadingRequest.swift */; };
+		A1EFD1012F30A17200B95BCD /* JY_Video_Cache_Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD04B2F30A17200B95BCD /* JY_Video_Cache_Configuration.swift */; };
+		A1EFD1022F30A17200B95BCD /* JY_SystemManager + Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0262F30A17200B95BCD /* JY_SystemManager + Func.swift */; };
+		A1EFD1032F30A17200B95BCD /* JYClipImageToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD03E2F30A17200B95BCD /* JYClipImageToolView.swift */; };
+		A1EFD1042F30A17200B95BCD /* JY_Video_Player_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0642F30A17200B95BCD /* JY_Video_Player_View.swift */; };
+		A1EFD1052F30A17200B95BCD /* JY_UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0712F30A17200B95BCD /* JY_UIFont.swift */; };
+		A1EFD1062F30A17200B95BCD /* 阿里妈妈数黑体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD09A2F30A17200B95BCD /* 阿里妈妈数黑体.ttf */; };
+		A1EFD1072F30A17200B95BCD /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0AE2F30A17200B95BCD /* Roboto-Thin.ttf */; };
+		A1EFD1082F30A17200B95BCD /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A82F30A17200B95BCD /* Roboto-Italic.ttf */; };
+		A1EFD1092F30A17200B95BCD /* 猫啃什锦黑.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD09B2F30A17200B95BCD /* 猫啃什锦黑.otf */; };
+		A1EFD10A2F30A17200B95BCD /* 字制区喜脉体.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD09D2F30A17200B95BCD /* 字制区喜脉体.otf */; };
+		A1EFD10B2F30A17200B95BCD /* DouyinSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A32F30A17200B95BCD /* DouyinSansBold.otf */; };
+		A1EFD10C2F30A17200B95BCD /* DIN Alternate Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A02F30A17200B95BCD /* DIN Alternate Bold.ttf */; };
+		A1EFD10D2F30A17200B95BCD /* 11426.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0992F30A17200B95BCD /* 11426.ttf */; };
+		A1EFD10E2F30A17200B95BCD /* Aa厚底黑.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD09E2F30A17200B95BCD /* Aa厚底黑.ttf */; };
+		A1EFD10F2F30A17200B95BCD /* JYClipImageController.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0422F30A17200B95BCD /* JYClipImageController.xcassets */; };
+		A1EFD1102F30A17200B95BCD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0AB2F30A17200B95BCD /* Roboto-Medium.ttf */; };
+		A1EFD1112F30A17200B95BCD /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A72F30A17200B95BCD /* Roboto-BoldItalic.ttf */; };
+		A1EFD1122F30A17200B95BCD /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A42F30A17200B95BCD /* Roboto-Black.ttf */; };
+		A1EFD1132F30A17200B95BCD /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0AC2F30A17200B95BCD /* Roboto-MediumItalic.ttf */; };
+		A1EFD1142F30A17200B95BCD /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0AA2F30A17200B95BCD /* Roboto-LightItalic.ttf */; };
+		A1EFD1152F30A17200B95BCD /* DingTalk-JinBuTi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A22F30A17200B95BCD /* DingTalk-JinBuTi.ttf */; };
+		A1EFD1162F30A17200B95BCD /* DIN Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A12F30A17200B95BCD /* DIN Condensed Bold.ttf */; };
+		A1EFD1172F30A17200B95BCD /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0AF2F30A17200B95BCD /* Roboto-ThinItalic.ttf */; };
+		A1EFD1182F30A17200B95BCD /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0B12F30A17200B95BCD /* Color.xcassets */; };
+		A1EFD1192F30A17200B95BCD /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A92F30A17200B95BCD /* Roboto-Light.ttf */; };
+		A1EFD11A2F30A17200B95BCD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0AD2F30A17200B95BCD /* Roboto-Regular.ttf */; };
+		A1EFD11B2F30A17200B95BCD /* 10921.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0982F30A17200B95BCD /* 10921.ttf */; };
+		A1EFD11C2F30A17200B95BCD /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A52F30A17200B95BCD /* Roboto-BlackItalic.ttf */; };
+		A1EFD11D2F30A17200B95BCD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD0A62F30A17200B95BCD /* Roboto-Bold.ttf */; };
+		A1EFD11E2F30A17200B95BCD /* 演示斜黑体.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD09C2F30A17200B95BCD /* 演示斜黑体.otf */; };
+		A1EFD11F2F30A17200B95BCD /* Arial Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1EFD09F2F30A17200B95BCD /* Arial Black.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A193F2412F30A10000D55F5E /* JY_GeneralDevelopmentTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JY_GeneralDevelopmentTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EFD00D2F30A17200B95BCD /* JY_CommonCryptoTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_CommonCryptoTool.swift; sourceTree = "<group>"; };
+		A1EFD00F2F30A17200B95BCD /* JY_DateTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_DateTool.swift; sourceTree = "<group>"; };
+		A1EFD0112F30A17200B95BCD /* JY_Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Int.swift; sourceTree = "<group>"; };
+		A1EFD0132F30A17200B95BCD /* JY_IAPConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_IAPConfig.swift; sourceTree = "<group>"; };
+		A1EFD0142F30A17200B95BCD /* JY_IAPTransactionRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_IAPTransactionRecord.swift; sourceTree = "<group>"; };
+		A1EFD0152F30A17200B95BCD /* JY_InAppPurchasesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_InAppPurchasesManager.swift; sourceTree = "<group>"; };
+		A1EFD0162F30A17200B95BCD /* JY_InAppPurchasesManager + Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JY_InAppPurchasesManager + Enum.swift"; sourceTree = "<group>"; };
+		A1EFD0182F30A17200B95BCD /* JY_JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_JsonUtils.swift; sourceTree = "<group>"; };
+		A1EFD01A2F30A17200B95BCD /* JY_AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_AuthorizationManager.swift; sourceTree = "<group>"; };
+		A1EFD01C2F30A17200B95BCD /* JY_LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_LocalizationManager.swift; sourceTree = "<group>"; };
+		A1EFD01E2F30A17200B95BCD /* JY_NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_NetworkManager.swift; sourceTree = "<group>"; };
+		A1EFD0202F30A17200B95BCD /* JY_ProjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_ProjectManager.swift; sourceTree = "<group>"; };
+		A1EFD0222F30A17200B95BCD /* JY_SandboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_SandboxManager.swift; sourceTree = "<group>"; };
+		A1EFD0232F30A17200B95BCD /* JY_SandboxManager + Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JY_SandboxManager + Image.swift"; sourceTree = "<group>"; };
+		A1EFD0252F30A17200B95BCD /* JY_SystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_SystemManager.swift; sourceTree = "<group>"; };
+		A1EFD0262F30A17200B95BCD /* JY_SystemManager + Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JY_SystemManager + Func.swift"; sourceTree = "<group>"; };
+		A1EFD0282F30A17200B95BCD /* JY_TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_TimerManager.swift; sourceTree = "<group>"; };
+		A1EFD02B2F30A17200B95BCD /* JY_DecimalMoneyTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_DecimalMoneyTool.swift; sourceTree = "<group>"; };
+		A1EFD02D2F30A17200B95BCD /* JY_ProjectTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_ProjectTool.swift; sourceTree = "<group>"; };
+		A1EFD02F2F30A17200B95BCD /* JY_TimeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_TimeTool.swift; sourceTree = "<group>"; };
+		A1EFD0322F30A17200B95BCD /* JY_BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_BaseController.swift; sourceTree = "<group>"; };
+		A1EFD0342F30A17200B95BCD /* JYAnimationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYAnimationUtils.swift; sourceTree = "<group>"; };
+		A1EFD0362F30A17200B95BCD /* JYClipImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYClipImageController.swift; sourceTree = "<group>"; };
+		A1EFD0372F30A17200B95BCD /* JYClipImageController + Interaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JYClipImageController + Interaction.swift"; sourceTree = "<group>"; };
+		A1EFD0392F30A17200B95BCD /* JYClipImageRatioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYClipImageRatioModel.swift; sourceTree = "<group>"; };
+		A1EFD03B2F30A17200B95BCD /* JYClipImageRatioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYClipImageRatioCell.swift; sourceTree = "<group>"; };
+		A1EFD03D2F30A17200B95BCD /* JYClipImageBottomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYClipImageBottomNavigationBar.swift; sourceTree = "<group>"; };
+		A1EFD03E2F30A17200B95BCD /* JYClipImageToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYClipImageToolView.swift; sourceTree = "<group>"; };
+		A1EFD03F2F30A17200B95BCD /* JYClipImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYClipImageView.swift; sourceTree = "<group>"; };
+		A1EFD0402F30A17200B95BCD /* JYClipOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYClipOverlayView.swift; sourceTree = "<group>"; };
+		A1EFD0422F30A17200B95BCD /* JYClipImageController.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JYClipImageController.xcassets; sourceTree = "<group>"; };
+		A1EFD0442F30A17200B95BCD /* JY_NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_NavigationController.swift; sourceTree = "<group>"; };
+		A1EFD0462F30A17200B95BCD /* JY_PageCurl_PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_PageCurl_PageController.swift; sourceTree = "<group>"; };
+		A1EFD0472F30A17200B95BCD /* JY_PagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_PagerController.swift; sourceTree = "<group>"; };
+		A1EFD0482F30A17200B95BCD /* JY_Scroll_PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Scroll_PageController.swift; sourceTree = "<group>"; };
+		A1EFD04A2F30A17200B95BCD /* JY_Video_Cache_Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Cache_Action.swift; sourceTree = "<group>"; };
+		A1EFD04B2F30A17200B95BCD /* JY_Video_Cache_Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Cache_Configuration.swift; sourceTree = "<group>"; };
+		A1EFD04C2F30A17200B95BCD /* JY_Video_Cache_Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Cache_Handler.swift; sourceTree = "<group>"; };
+		A1EFD04D2F30A17200B95BCD /* JY_Video_Cache_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Cache_Manager.swift; sourceTree = "<group>"; };
+		A1EFD04F2F30A17200B95BCD /* JY_Video_Player_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Player_Controller.swift; sourceTree = "<group>"; };
+		A1EFD0512F30A17200B95BCD /* JY_Video_Download_Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Download_Info.swift; sourceTree = "<group>"; };
+		A1EFD0522F30A17200B95BCD /* JY_Video_Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Downloader.swift; sourceTree = "<group>"; };
+		A1EFD0532F30A17200B95BCD /* JY_Video_Downloader_Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Downloader_Handler.swift; sourceTree = "<group>"; };
+		A1EFD0542F30A17200B95BCD /* JY_Video_Downloader_Session_Delegate_Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Downloader_Session_Delegate_Handler.swift; sourceTree = "<group>"; };
+		A1EFD0562F30A17200B95BCD /* JY_Video_Player_State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Player_State.swift; sourceTree = "<group>"; };
+		A1EFD0582F30A17200B95BCD /* JYExtension + AVAssetResourceLoadingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JYExtension + AVAssetResourceLoadingRequest.swift"; sourceTree = "<group>"; };
+		A1EFD0592F30A17200B95BCD /* JYExtension + AVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JYExtension + AVPlayer.swift"; sourceTree = "<group>"; };
+		A1EFD05A2F30A17200B95BCD /* JYExtension + AVPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JYExtension + AVPlayerItem.swift"; sourceTree = "<group>"; };
+		A1EFD05B2F30A17200B95BCD /* JYExtension + Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JYExtension + Double.swift"; sourceTree = "<group>"; };
+		A1EFD05C2F30A17200B95BCD /* JYExtension + URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JYExtension + URL.swift"; sourceTree = "<group>"; };
+		A1EFD05E2F30A17200B95BCD /* JY_Video_Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Info.swift; sourceTree = "<group>"; };
+		A1EFD05F2F30A17200B95BCD /* JY_Video_Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Loader.swift; sourceTree = "<group>"; };
+		A1EFD0602F30A17200B95BCD /* JY_Video_Loader_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Loader_Manager.swift; sourceTree = "<group>"; };
+		A1EFD0612F30A17200B95BCD /* JY_Video_Preload_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Preload_Manager.swift; sourceTree = "<group>"; };
+		A1EFD0622F30A17200B95BCD /* JY_Video_Request_Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Request_Loader.swift; sourceTree = "<group>"; };
+		A1EFD0642F30A17200B95BCD /* JY_Video_Player_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Video_Player_View.swift; sourceTree = "<group>"; };
+		A1EFD0682F30A17200B95BCD /* JY_DeviceTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_DeviceTool.swift; sourceTree = "<group>"; };
+		A1EFD0692F30A17200B95BCD /* JY_DeviceTool + UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JY_DeviceTool + UUID.swift"; sourceTree = "<group>"; };
+		A1EFD06B2F30A17200B95BCD /* JY_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_String.swift; sourceTree = "<group>"; };
+		A1EFD06C2F30A17200B95BCD /* JY_UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_UIColor.swift; sourceTree = "<group>"; };
+		A1EFD06D2F30A17200B95BCD /* JY_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_UIImage.swift; sourceTree = "<group>"; };
+		A1EFD06E2F30A17200B95BCD /* JY_UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_UIView.swift; sourceTree = "<group>"; };
+		A1EFD06F2F30A17200B95BCD /* JY_UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_UIWindow.swift; sourceTree = "<group>"; };
+		A1EFD0712F30A17200B95BCD /* JY_UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_UIFont.swift; sourceTree = "<group>"; };
+		A1EFD0732F30A17200B95BCD /* UITextView+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		A1EFD0742F30A17200B95BCD /* UITextView+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		A1EFD0762F30A17200B95BCD /* JY_PageTurningMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_PageTurningMode.swift; sourceTree = "<group>"; };
+		A1EFD0782F30A17200B95BCD /* JY_ScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_ScreenManager.swift; sourceTree = "<group>"; };
+		A1EFD07A2F30A17200B95BCD /* JY_TextPaginationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_TextPaginationTool.swift; sourceTree = "<group>"; };
+		A1EFD07C2F30A17200B95BCD /* JY_BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_BaseCell.swift; sourceTree = "<group>"; };
+		A1EFD07D2F30A17200B95BCD /* JY_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_View.swift; sourceTree = "<group>"; };
+		A1EFD07F2F30A17200B95BCD /* JY_LoadingHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_LoadingHUD.swift; sourceTree = "<group>"; };
+		A1EFD0812F30A17200B95BCD /* JY_TipHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_TipHUD.swift; sourceTree = "<group>"; };
+		A1EFD0842F30A17200B95BCD /* JY_Base_MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Base_MineCell.swift; sourceTree = "<group>"; };
+		A1EFD0852F30A17200B95BCD /* JY_Base_MineMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Base_MineMessageCell.swift; sourceTree = "<group>"; };
+		A1EFD0872F30A17200B95BCD /* JY_SemicircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_SemicircleView.swift; sourceTree = "<group>"; };
+		A1EFD0892F30A17200B95BCD /* JY_Base_SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Base_SettingCell.swift; sourceTree = "<group>"; };
+		A1EFD08B2F30A17200B95BCD /* JY_Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Slider.swift; sourceTree = "<group>"; };
+		A1EFD08D2F30A17200B95BCD /* JY_ContactTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_ContactTextField.swift; sourceTree = "<group>"; };
+		A1EFD08E2F30A17200B95BCD /* JY_PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_PhoneTextField.swift; sourceTree = "<group>"; };
+		A1EFD08F2F30A17200B95BCD /* JY_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_TextField.swift; sourceTree = "<group>"; };
+		A1EFD0902F30A17200B95BCD /* JY_VerifyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_VerifyTextField.swift; sourceTree = "<group>"; };
+		A1EFD0922F30A17200B95BCD /* JY_ContentTextView_TextCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_ContentTextView_TextCount.swift; sourceTree = "<group>"; };
+		A1EFD0942F30A17200B95BCD /* JY_WKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_WKWebView.swift; sourceTree = "<group>"; };
+		A1EFD0982F30A17200B95BCD /* 10921.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 10921.ttf; sourceTree = "<group>"; };
+		A1EFD0992F30A17200B95BCD /* 11426.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 11426.ttf; sourceTree = "<group>"; };
+		A1EFD09A2F30A17200B95BCD /* 阿里妈妈数黑体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "阿里妈妈数黑体.ttf"; sourceTree = "<group>"; };
+		A1EFD09B2F30A17200B95BCD /* 猫啃什锦黑.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "猫啃什锦黑.otf"; sourceTree = "<group>"; };
+		A1EFD09C2F30A17200B95BCD /* 演示斜黑体.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "演示斜黑体.otf"; sourceTree = "<group>"; };
+		A1EFD09D2F30A17200B95BCD /* 字制区喜脉体.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "字制区喜脉体.otf"; sourceTree = "<group>"; };
+		A1EFD09E2F30A17200B95BCD /* Aa厚底黑.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aa厚底黑.ttf"; sourceTree = "<group>"; };
+		A1EFD09F2F30A17200B95BCD /* Arial Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arial Black.ttf"; sourceTree = "<group>"; };
+		A1EFD0A02F30A17200B95BCD /* DIN Alternate Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Alternate Bold.ttf"; sourceTree = "<group>"; };
+		A1EFD0A12F30A17200B95BCD /* DIN Condensed Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Condensed Bold.ttf"; sourceTree = "<group>"; };
+		A1EFD0A22F30A17200B95BCD /* DingTalk-JinBuTi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DingTalk-JinBuTi.ttf"; sourceTree = "<group>"; };
+		A1EFD0A32F30A17200B95BCD /* DouyinSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DouyinSansBold.otf; sourceTree = "<group>"; };
+		A1EFD0A42F30A17200B95BCD /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		A1EFD0A52F30A17200B95BCD /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		A1EFD0A62F30A17200B95BCD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		A1EFD0A72F30A17200B95BCD /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A1EFD0A82F30A17200B95BCD /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		A1EFD0A92F30A17200B95BCD /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		A1EFD0AA2F30A17200B95BCD /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		A1EFD0AB2F30A17200B95BCD /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		A1EFD0AC2F30A17200B95BCD /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A1EFD0AD2F30A17200B95BCD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		A1EFD0AE2F30A17200B95BCD /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		A1EFD0AF2F30A17200B95BCD /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		A1EFD0B12F30A17200B95BCD /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A193F2532F30A10100D55F5E /* Exceptions for "JY_GeneralDevelopmentTools" folder in "JY_GeneralDevelopmentTools" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A193F2402F30A10000D55F5E /* JY_GeneralDevelopmentTools */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A193F2432F30A10000D55F5E /* JY_GeneralDevelopmentTools */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A193F2532F30A10100D55F5E /* Exceptions for "JY_GeneralDevelopmentTools" folder in "JY_GeneralDevelopmentTools" target */,
+			);
+			path = JY_GeneralDevelopmentTools;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A193F23E2F30A10000D55F5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A193F2382F30A10000D55F5E = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0B32F30A17200B95BCD /* JY_Tools */,
+				A193F2432F30A10000D55F5E /* JY_GeneralDevelopmentTools */,
+				A193F2422F30A10000D55F5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A193F2422F30A10000D55F5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A193F2412F30A10000D55F5E /* JY_GeneralDevelopmentTools.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1EFD00E2F30A17200B95BCD /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD00D2F30A17200B95BCD /* JY_CommonCryptoTool.swift */,
+			);
+			path = CommonCrypto;
+			sourceTree = "<group>";
+		};
+		A1EFD0102F30A17200B95BCD /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD00F2F30A17200B95BCD /* JY_DateTool.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		A1EFD0122F30A17200B95BCD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0112F30A17200B95BCD /* JY_Int.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A1EFD0172F30A17200B95BCD /* In-app Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0132F30A17200B95BCD /* JY_IAPConfig.swift */,
+				A1EFD0142F30A17200B95BCD /* JY_IAPTransactionRecord.swift */,
+				A1EFD0152F30A17200B95BCD /* JY_InAppPurchasesManager.swift */,
+				A1EFD0162F30A17200B95BCD /* JY_InAppPurchasesManager + Enum.swift */,
+			);
+			path = "In-app Purchases";
+			sourceTree = "<group>";
+		};
+		A1EFD0192F30A17200B95BCD /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0182F30A17200B95BCD /* JY_JsonUtils.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		A1EFD01B2F30A17200B95BCD /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD01A2F30A17200B95BCD /* JY_AuthorizationManager.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		A1EFD01D2F30A17200B95BCD /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD01C2F30A17200B95BCD /* JY_LocalizationManager.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		A1EFD01F2F30A17200B95BCD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD01E2F30A17200B95BCD /* JY_NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A1EFD0212F30A17200B95BCD /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0202F30A17200B95BCD /* JY_ProjectManager.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		A1EFD0242F30A17200B95BCD /* Sandbox */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0222F30A17200B95BCD /* JY_SandboxManager.swift */,
+				A1EFD0232F30A17200B95BCD /* JY_SandboxManager + Image.swift */,
+			);
+			path = Sandbox;
+			sourceTree = "<group>";
+		};
+		A1EFD0272F30A17200B95BCD /* System */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0252F30A17200B95BCD /* JY_SystemManager.swift */,
+				A1EFD0262F30A17200B95BCD /* JY_SystemManager + Func.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		A1EFD0292F30A17200B95BCD /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0282F30A17200B95BCD /* JY_TimerManager.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		A1EFD02A2F30A17200B95BCD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD01B2F30A17200B95BCD /* Authorization */,
+				A1EFD01D2F30A17200B95BCD /* Localization */,
+				A1EFD01F2F30A17200B95BCD /* Network */,
+				A1EFD0212F30A17200B95BCD /* Project */,
+				A1EFD0242F30A17200B95BCD /* Sandbox */,
+				A1EFD0272F30A17200B95BCD /* System */,
+				A1EFD0292F30A17200B95BCD /* Timer */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A1EFD02C2F30A17200B95BCD /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD02B2F30A17200B95BCD /* JY_DecimalMoneyTool.swift */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
+		A1EFD02E2F30A17200B95BCD /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD02D2F30A17200B95BCD /* JY_ProjectTool.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		A1EFD0302F30A17200B95BCD /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD02F2F30A17200B95BCD /* JY_TimeTool.swift */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
+		A1EFD0312F30A17200B95BCD /* JY_GeneralDevelopmentTools */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD00E2F30A17200B95BCD /* CommonCrypto */,
+				A1EFD0102F30A17200B95BCD /* Date */,
+				A1EFD0122F30A17200B95BCD /* Extension */,
+				A1EFD0172F30A17200B95BCD /* In-app Purchases */,
+				A1EFD0192F30A17200B95BCD /* Json */,
+				A1EFD02A2F30A17200B95BCD /* Manager */,
+				A1EFD02C2F30A17200B95BCD /* Money */,
+				A1EFD02E2F30A17200B95BCD /* Project */,
+				A1EFD0302F30A17200B95BCD /* Time */,
+			);
+			path = JY_GeneralDevelopmentTools;
+			sourceTree = "<group>";
+		};
+		A1EFD0332F30A17200B95BCD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0322F30A17200B95BCD /* JY_BaseController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A1EFD0352F30A17200B95BCD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0342F30A17200B95BCD /* JYAnimationUtils.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		A1EFD0382F30A17200B95BCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0362F30A17200B95BCD /* JYClipImageController.swift */,
+				A1EFD0372F30A17200B95BCD /* JYClipImageController + Interaction.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A1EFD03A2F30A17200B95BCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0392F30A17200B95BCD /* JYClipImageRatioModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1EFD03C2F30A17200B95BCD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD03B2F30A17200B95BCD /* JYClipImageRatioCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A1EFD0412F30A17200B95BCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD03C2F30A17200B95BCD /* Cell */,
+				A1EFD03D2F30A17200B95BCD /* JYClipImageBottomNavigationBar.swift */,
+				A1EFD03E2F30A17200B95BCD /* JYClipImageToolView.swift */,
+				A1EFD03F2F30A17200B95BCD /* JYClipImageView.swift */,
+				A1EFD0402F30A17200B95BCD /* JYClipOverlayView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1EFD0432F30A17200B95BCD /* Clip Image */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0352F30A17200B95BCD /* Configuration */,
+				A1EFD0382F30A17200B95BCD /* Controller */,
+				A1EFD03A2F30A17200B95BCD /* Model */,
+				A1EFD0412F30A17200B95BCD /* View */,
+				A1EFD0422F30A17200B95BCD /* JYClipImageController.xcassets */,
+			);
+			path = "Clip Image";
+			sourceTree = "<group>";
+		};
+		A1EFD0452F30A17200B95BCD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0442F30A17200B95BCD /* JY_NavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A1EFD0492F30A17200B95BCD /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0462F30A17200B95BCD /* JY_PageCurl_PageController.swift */,
+				A1EFD0472F30A17200B95BCD /* JY_PagerController.swift */,
+				A1EFD0482F30A17200B95BCD /* JY_Scroll_PageController.swift */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
+		A1EFD04E2F30A17200B95BCD /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD04A2F30A17200B95BCD /* JY_Video_Cache_Action.swift */,
+				A1EFD04B2F30A17200B95BCD /* JY_Video_Cache_Configuration.swift */,
+				A1EFD04C2F30A17200B95BCD /* JY_Video_Cache_Handler.swift */,
+				A1EFD04D2F30A17200B95BCD /* JY_Video_Cache_Manager.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		A1EFD0502F30A17200B95BCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD04F2F30A17200B95BCD /* JY_Video_Player_Controller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A1EFD0552F30A17200B95BCD /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0512F30A17200B95BCD /* JY_Video_Download_Info.swift */,
+				A1EFD0522F30A17200B95BCD /* JY_Video_Downloader.swift */,
+				A1EFD0532F30A17200B95BCD /* JY_Video_Downloader_Handler.swift */,
+				A1EFD0542F30A17200B95BCD /* JY_Video_Downloader_Session_Delegate_Handler.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		A1EFD0572F30A17200B95BCD /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0562F30A17200B95BCD /* JY_Video_Player_State.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		A1EFD05D2F30A17200B95BCD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0582F30A17200B95BCD /* JYExtension + AVAssetResourceLoadingRequest.swift */,
+				A1EFD0592F30A17200B95BCD /* JYExtension + AVPlayer.swift */,
+				A1EFD05A2F30A17200B95BCD /* JYExtension + AVPlayerItem.swift */,
+				A1EFD05B2F30A17200B95BCD /* JYExtension + Double.swift */,
+				A1EFD05C2F30A17200B95BCD /* JYExtension + URL.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A1EFD0632F30A17200B95BCD /* Loder */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD05E2F30A17200B95BCD /* JY_Video_Info.swift */,
+				A1EFD05F2F30A17200B95BCD /* JY_Video_Loader.swift */,
+				A1EFD0602F30A17200B95BCD /* JY_Video_Loader_Manager.swift */,
+				A1EFD0612F30A17200B95BCD /* JY_Video_Preload_Manager.swift */,
+				A1EFD0622F30A17200B95BCD /* JY_Video_Request_Loader.swift */,
+			);
+			path = Loder;
+			sourceTree = "<group>";
+		};
+		A1EFD0652F30A17200B95BCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0642F30A17200B95BCD /* JY_Video_Player_View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1EFD0662F30A17200B95BCD /* Video Player */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD04E2F30A17200B95BCD /* Cache */,
+				A1EFD0502F30A17200B95BCD /* Controller */,
+				A1EFD0552F30A17200B95BCD /* Download */,
+				A1EFD0572F30A17200B95BCD /* Enum */,
+				A1EFD05D2F30A17200B95BCD /* Extension */,
+				A1EFD0632F30A17200B95BCD /* Loder */,
+				A1EFD0652F30A17200B95BCD /* View */,
+			);
+			path = "Video Player";
+			sourceTree = "<group>";
+		};
+		A1EFD0672F30A17200B95BCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0332F30A17200B95BCD /* Base */,
+				A1EFD0432F30A17200B95BCD /* Clip Image */,
+				A1EFD0452F30A17200B95BCD /* Navigation */,
+				A1EFD0492F30A17200B95BCD /* Pager */,
+				A1EFD0662F30A17200B95BCD /* Video Player */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A1EFD06A2F30A17200B95BCD /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0682F30A17200B95BCD /* JY_DeviceTool.swift */,
+				A1EFD0692F30A17200B95BCD /* JY_DeviceTool + UUID.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		A1EFD0702F30A17200B95BCD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD06B2F30A17200B95BCD /* JY_String.swift */,
+				A1EFD06C2F30A17200B95BCD /* JY_UIColor.swift */,
+				A1EFD06D2F30A17200B95BCD /* JY_UIImage.swift */,
+				A1EFD06E2F30A17200B95BCD /* JY_UIView.swift */,
+				A1EFD06F2F30A17200B95BCD /* JY_UIWindow.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A1EFD0722F30A17200B95BCD /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0712F30A17200B95BCD /* JY_UIFont.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A1EFD0752F30A17200B95BCD /* OC-File */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0732F30A17200B95BCD /* UITextView+Placeholder.h */,
+				A1EFD0742F30A17200B95BCD /* UITextView+Placeholder.m */,
+			);
+			path = "OC-File";
+			sourceTree = "<group>";
+		};
+		A1EFD0772F30A17200B95BCD /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0762F30A17200B95BCD /* JY_PageTurningMode.swift */,
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
+		A1EFD0792F30A17200B95BCD /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0782F30A17200B95BCD /* JY_ScreenManager.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		A1EFD07B2F30A17200B95BCD /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD07A2F30A17200B95BCD /* JY_TextPaginationTool.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		A1EFD07E2F30A17200B95BCD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD07C2F30A17200B95BCD /* JY_BaseCell.swift */,
+				A1EFD07D2F30A17200B95BCD /* JY_View.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A1EFD0802F30A17200B95BCD /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD07F2F30A17200B95BCD /* JY_LoadingHUD.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		A1EFD0822F30A17200B95BCD /* Tip */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0812F30A17200B95BCD /* JY_TipHUD.swift */,
+			);
+			path = Tip;
+			sourceTree = "<group>";
+		};
+		A1EFD0832F30A17200B95BCD /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0802F30A17200B95BCD /* Loading */,
+				A1EFD0822F30A17200B95BCD /* Tip */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		A1EFD0862F30A17200B95BCD /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0842F30A17200B95BCD /* JY_Base_MineCell.swift */,
+				A1EFD0852F30A17200B95BCD /* JY_Base_MineMessageCell.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		A1EFD0882F30A17200B95BCD /* Semicircle（半圆） */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0872F30A17200B95BCD /* JY_SemicircleView.swift */,
+			);
+			path = "Semicircle（半圆）";
+			sourceTree = "<group>";
+		};
+		A1EFD08A2F30A17200B95BCD /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0892F30A17200B95BCD /* JY_Base_SettingCell.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A1EFD08C2F30A17200B95BCD /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD08B2F30A17200B95BCD /* JY_Slider.swift */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		A1EFD0912F30A17200B95BCD /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD08D2F30A17200B95BCD /* JY_ContactTextField.swift */,
+				A1EFD08E2F30A17200B95BCD /* JY_PhoneTextField.swift */,
+				A1EFD08F2F30A17200B95BCD /* JY_TextField.swift */,
+				A1EFD0902F30A17200B95BCD /* JY_VerifyTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		A1EFD0932F30A17200B95BCD /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0922F30A17200B95BCD /* JY_ContentTextView_TextCount.swift */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		A1EFD0952F30A17200B95BCD /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0942F30A17200B95BCD /* JY_WKWebView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		A1EFD0962F30A17200B95BCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD07E2F30A17200B95BCD /* Base */,
+				A1EFD0832F30A17200B95BCD /* HUD */,
+				A1EFD0862F30A17200B95BCD /* Mine */,
+				A1EFD0882F30A17200B95BCD /* Semicircle（半圆） */,
+				A1EFD08A2F30A17200B95BCD /* Setting */,
+				A1EFD08C2F30A17200B95BCD /* Slider */,
+				A1EFD0912F30A17200B95BCD /* TextField */,
+				A1EFD0932F30A17200B95BCD /* TextView */,
+				A1EFD0952F30A17200B95BCD /* WebView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1EFD0972F30A17200B95BCD /* JY_UIResourceLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0672F30A17200B95BCD /* Controller */,
+				A1EFD06A2F30A17200B95BCD /* Device */,
+				A1EFD0702F30A17200B95BCD /* Extension */,
+				A1EFD0722F30A17200B95BCD /* Font */,
+				A1EFD0752F30A17200B95BCD /* OC-File */,
+				A1EFD0772F30A17200B95BCD /* Read */,
+				A1EFD0792F30A17200B95BCD /* Screen */,
+				A1EFD07B2F30A17200B95BCD /* Text */,
+				A1EFD0962F30A17200B95BCD /* View */,
+			);
+			path = JY_UIResourceLibrary;
+			sourceTree = "<group>";
+		};
+		A1EFD0B02F30A17200B95BCD /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0982F30A17200B95BCD /* 10921.ttf */,
+				A1EFD0992F30A17200B95BCD /* 11426.ttf */,
+				A1EFD09A2F30A17200B95BCD /* 阿里妈妈数黑体.ttf */,
+				A1EFD09B2F30A17200B95BCD /* 猫啃什锦黑.otf */,
+				A1EFD09C2F30A17200B95BCD /* 演示斜黑体.otf */,
+				A1EFD09D2F30A17200B95BCD /* 字制区喜脉体.otf */,
+				A1EFD09E2F30A17200B95BCD /* Aa厚底黑.ttf */,
+				A1EFD09F2F30A17200B95BCD /* Arial Black.ttf */,
+				A1EFD0A02F30A17200B95BCD /* DIN Alternate Bold.ttf */,
+				A1EFD0A12F30A17200B95BCD /* DIN Condensed Bold.ttf */,
+				A1EFD0A22F30A17200B95BCD /* DingTalk-JinBuTi.ttf */,
+				A1EFD0A32F30A17200B95BCD /* DouyinSansBold.otf */,
+				A1EFD0A42F30A17200B95BCD /* Roboto-Black.ttf */,
+				A1EFD0A52F30A17200B95BCD /* Roboto-BlackItalic.ttf */,
+				A1EFD0A62F30A17200B95BCD /* Roboto-Bold.ttf */,
+				A1EFD0A72F30A17200B95BCD /* Roboto-BoldItalic.ttf */,
+				A1EFD0A82F30A17200B95BCD /* Roboto-Italic.ttf */,
+				A1EFD0A92F30A17200B95BCD /* Roboto-Light.ttf */,
+				A1EFD0AA2F30A17200B95BCD /* Roboto-LightItalic.ttf */,
+				A1EFD0AB2F30A17200B95BCD /* Roboto-Medium.ttf */,
+				A1EFD0AC2F30A17200B95BCD /* Roboto-MediumItalic.ttf */,
+				A1EFD0AD2F30A17200B95BCD /* Roboto-Regular.ttf */,
+				A1EFD0AE2F30A17200B95BCD /* Roboto-Thin.ttf */,
+				A1EFD0AF2F30A17200B95BCD /* Roboto-ThinItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A1EFD0B22F30A17200B95BCD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0B02F30A17200B95BCD /* Font */,
+				A1EFD0B12F30A17200B95BCD /* Color.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1EFD0B32F30A17200B95BCD /* JY_Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFD0312F30A17200B95BCD /* JY_GeneralDevelopmentTools */,
+				A1EFD0972F30A17200B95BCD /* JY_UIResourceLibrary */,
+				A1EFD0B22F30A17200B95BCD /* Resources */,
+			);
+			path = JY_Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A193F2402F30A10000D55F5E /* JY_GeneralDevelopmentTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A193F2542F30A10100D55F5E /* Build configuration list for PBXNativeTarget "JY_GeneralDevelopmentTools" */;
+			buildPhases = (
+				A193F23D2F30A10000D55F5E /* Sources */,
+				A193F23E2F30A10000D55F5E /* Frameworks */,
+				A193F23F2F30A10000D55F5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A193F2432F30A10000D55F5E /* JY_GeneralDevelopmentTools */,
+			);
+			name = JY_GeneralDevelopmentTools;
+			packageProductDependencies = (
+			);
+			productName = JY_GeneralDevelopmentTools;
+			productReference = A193F2412F30A10000D55F5E /* JY_GeneralDevelopmentTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A193F2392F30A10000D55F5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					A193F2402F30A10000D55F5E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = A193F23C2F30A10000D55F5E /* Build configuration list for PBXProject "JY_GeneralDevelopmentTools" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A193F2382F30A10000D55F5E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A193F2422F30A10000D55F5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A193F2402F30A10000D55F5E /* JY_GeneralDevelopmentTools */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A193F23F2F30A10000D55F5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EFD1062F30A17200B95BCD /* 阿里妈妈数黑体.ttf in Resources */,
+				A1EFD1072F30A17200B95BCD /* Roboto-Thin.ttf in Resources */,
+				A1EFD1082F30A17200B95BCD /* Roboto-Italic.ttf in Resources */,
+				A1EFD1092F30A17200B95BCD /* 猫啃什锦黑.otf in Resources */,
+				A1EFD10A2F30A17200B95BCD /* 字制区喜脉体.otf in Resources */,
+				A1EFD10B2F30A17200B95BCD /* DouyinSansBold.otf in Resources */,
+				A1EFD10C2F30A17200B95BCD /* DIN Alternate Bold.ttf in Resources */,
+				A1EFD10D2F30A17200B95BCD /* 11426.ttf in Resources */,
+				A1EFD10E2F30A17200B95BCD /* Aa厚底黑.ttf in Resources */,
+				A1EFD10F2F30A17200B95BCD /* JYClipImageController.xcassets in Resources */,
+				A1EFD1102F30A17200B95BCD /* Roboto-Medium.ttf in Resources */,
+				A1EFD1112F30A17200B95BCD /* Roboto-BoldItalic.ttf in Resources */,
+				A1EFD1122F30A17200B95BCD /* Roboto-Black.ttf in Resources */,
+				A1EFD1132F30A17200B95BCD /* Roboto-MediumItalic.ttf in Resources */,
+				A1EFD1142F30A17200B95BCD /* Roboto-LightItalic.ttf in Resources */,
+				A1EFD1152F30A17200B95BCD /* DingTalk-JinBuTi.ttf in Resources */,
+				A1EFD1162F30A17200B95BCD /* DIN Condensed Bold.ttf in Resources */,
+				A1EFD1172F30A17200B95BCD /* Roboto-ThinItalic.ttf in Resources */,
+				A1EFD1182F30A17200B95BCD /* Color.xcassets in Resources */,
+				A1EFD1192F30A17200B95BCD /* Roboto-Light.ttf in Resources */,
+				A1EFD11A2F30A17200B95BCD /* Roboto-Regular.ttf in Resources */,
+				A1EFD11B2F30A17200B95BCD /* 10921.ttf in Resources */,
+				A1EFD11C2F30A17200B95BCD /* Roboto-BlackItalic.ttf in Resources */,
+				A1EFD11D2F30A17200B95BCD /* Roboto-Bold.ttf in Resources */,
+				A1EFD11E2F30A17200B95BCD /* 演示斜黑体.otf in Resources */,
+				A1EFD11F2F30A17200B95BCD /* Arial Black.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A193F23D2F30A10000D55F5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EFD0B42F30A17200B95BCD /* JY_SandboxManager.swift in Sources */,
+				A1EFD0B52F30A17200B95BCD /* JY_VerifyTextField.swift in Sources */,
+				A1EFD0B62F30A17200B95BCD /* JY_AuthorizationManager.swift in Sources */,
+				A1EFD0B72F30A17200B95BCD /* JY_Video_Player_State.swift in Sources */,
+				A1EFD0B82F30A17200B95BCD /* JY_UIImage.swift in Sources */,
+				A1EFD0B92F30A17200B95BCD /* JY_Video_Preload_Manager.swift in Sources */,
+				A1EFD0BA2F30A17200B95BCD /* JY_IAPConfig.swift in Sources */,
+				A1EFD0BB2F30A17200B95BCD /* JY_WKWebView.swift in Sources */,
+				A1EFD0BC2F30A17200B95BCD /* JYExtension + AVPlayerItem.swift in Sources */,
+				A1EFD0BD2F30A17200B95BCD /* JY_String.swift in Sources */,
+				A1EFD0BE2F30A17200B95BCD /* JY_UIColor.swift in Sources */,
+				A1EFD0BF2F30A17200B95BCD /* JY_ProjectManager.swift in Sources */,
+				A1EFD0C02F30A17200B95BCD /* JY_LoadingHUD.swift in Sources */,
+				A1EFD0C12F30A17200B95BCD /* JY_TextPaginationTool.swift in Sources */,
+				A1EFD0C22F30A17200B95BCD /* JY_Video_Loader.swift in Sources */,
+				A1EFD0C32F30A17200B95BCD /* JYExtension + Double.swift in Sources */,
+				A1EFD0C42F30A17200B95BCD /* JY_Scroll_PageController.swift in Sources */,
+				A1EFD0C52F30A17200B95BCD /* JY_NavigationController.swift in Sources */,
+				A1EFD0C62F30A17200B95BCD /* JY_JsonUtils.swift in Sources */,
+				A1EFD0C72F30A17200B95BCD /* JY_Base_MineMessageCell.swift in Sources */,
+				A1EFD0C82F30A17200B95BCD /* JY_PageTurningMode.swift in Sources */,
+				A1EFD0C92F30A17200B95BCD /* JY_Int.swift in Sources */,
+				A1EFD0CA2F30A17200B95BCD /* JY_Base_MineCell.swift in Sources */,
+				A1EFD0CB2F30A17200B95BCD /* JY_ContactTextField.swift in Sources */,
+				A1EFD0CC2F30A17200B95BCD /* JY_Video_Info.swift in Sources */,
+				A1EFD0CD2F30A17200B95BCD /* JY_TimeTool.swift in Sources */,
+				A1EFD0CE2F30A17200B95BCD /* JY_BaseCell.swift in Sources */,
+				A1EFD0CF2F30A17200B95BCD /* JYClipImageRatioCell.swift in Sources */,
+				A1EFD0D02F30A17200B95BCD /* JY_Video_Downloader.swift in Sources */,
+				A1EFD0D12F30A17200B95BCD /* JY_Video_Player_Controller.swift in Sources */,
+				A1EFD0D22F30A17200B95BCD /* JY_PhoneTextField.swift in Sources */,
+				A1EFD0D32F30A17200B95BCD /* JY_Video_Cache_Manager.swift in Sources */,
+				A1EFD0D42F30A17200B95BCD /* JYClipImageController.swift in Sources */,
+				A1EFD0D52F30A17200B95BCD /* JY_UIWindow.swift in Sources */,
+				A1EFD0D62F30A17200B95BCD /* JY_InAppPurchasesManager.swift in Sources */,
+				A1EFD0D72F30A17200B95BCD /* JYExtension + AVPlayer.swift in Sources */,
+				A1EFD0D82F30A17200B95BCD /* JYClipImageRatioModel.swift in Sources */,
+				A1EFD0D92F30A17200B95BCD /* JY_TextField.swift in Sources */,
+				A1EFD0DA2F30A17200B95BCD /* JY_Video_Loader_Manager.swift in Sources */,
+				A1EFD0DB2F30A17200B95BCD /* JY_Video_Downloader_Handler.swift in Sources */,
+				A1EFD0DC2F30A17200B95BCD /* JY_DateTool.swift in Sources */,
+				A1EFD0DD2F30A17200B95BCD /* JY_SystemManager.swift in Sources */,
+				A1EFD0DE2F30A17200B95BCD /* JY_PagerController.swift in Sources */,
+				A1EFD0DF2F30A17200B95BCD /* JY_InAppPurchasesManager + Enum.swift in Sources */,
+				A1EFD0E02F30A17200B95BCD /* JY_NetworkManager.swift in Sources */,
+				A1EFD0E12F30A17200B95BCD /* JY_PageCurl_PageController.swift in Sources */,
+				A1EFD0E22F30A17200B95BCD /* JYClipImageBottomNavigationBar.swift in Sources */,
+				A1EFD0E32F30A17200B95BCD /* JY_UIView.swift in Sources */,
+				A1EFD0E42F30A17200B95BCD /* JY_TimerManager.swift in Sources */,
+				A1EFD0E52F30A17200B95BCD /* JY_DeviceTool + UUID.swift in Sources */,
+				A1EFD0E62F30A17200B95BCD /* JY_ProjectTool.swift in Sources */,
+				A1EFD0E72F30A17200B95BCD /* JYClipImageController + Interaction.swift in Sources */,
+				A1EFD0E82F30A17200B95BCD /* JY_LocalizationManager.swift in Sources */,
+				A1EFD0E92F30A17200B95BCD /* JY_Video_Download_Info.swift in Sources */,
+				A1EFD0EA2F30A17200B95BCD /* JYExtension + URL.swift in Sources */,
+				A1EFD0EB2F30A17200B95BCD /* JYClipOverlayView.swift in Sources */,
+				A1EFD0EC2F30A17200B95BCD /* JY_TipHUD.swift in Sources */,
+				A1EFD0ED2F30A17200B95BCD /* JY_Video_Downloader_Session_Delegate_Handler.swift in Sources */,
+				A1EFD0EE2F30A17200B95BCD /* JY_ScreenManager.swift in Sources */,
+				A1EFD0EF2F30A17200B95BCD /* JY_SemicircleView.swift in Sources */,
+				A1EFD0F02F30A17200B95BCD /* JYClipImageView.swift in Sources */,
+				A1EFD0F12F30A17200B95BCD /* JYAnimationUtils.swift in Sources */,
+				A1EFD0F22F30A17200B95BCD /* JY_Slider.swift in Sources */,
+				A1EFD0F32F30A17200B95BCD /* JY_Video_Cache_Handler.swift in Sources */,
+				A1EFD0F42F30A17200B95BCD /* JY_Base_SettingCell.swift in Sources */,
+				A1EFD0F52F30A17200B95BCD /* JY_IAPTransactionRecord.swift in Sources */,
+				A1EFD0F62F30A17200B95BCD /* UITextView+Placeholder.m in Sources */,
+				A1EFD0F72F30A17200B95BCD /* JY_BaseController.swift in Sources */,
+				A1EFD0F82F30A17200B95BCD /* JY_SandboxManager + Image.swift in Sources */,
+				A1EFD0F92F30A17200B95BCD /* JY_Video_Request_Loader.swift in Sources */,
+				A1EFD0FA2F30A17200B95BCD /* JY_CommonCryptoTool.swift in Sources */,
+				A1EFD0FB2F30A17200B95BCD /* JY_Video_Cache_Action.swift in Sources */,
+				A1EFD0FC2F30A17200B95BCD /* JY_DecimalMoneyTool.swift in Sources */,
+				A1EFD0FD2F30A17200B95BCD /* JY_View.swift in Sources */,
+				A1EFD0FE2F30A17200B95BCD /* JY_ContentTextView_TextCount.swift in Sources */,
+				A1EFD0FF2F30A17200B95BCD /* JY_DeviceTool.swift in Sources */,
+				A1EFD1002F30A17200B95BCD /* JYExtension + AVAssetResourceLoadingRequest.swift in Sources */,
+				A1EFD1012F30A17200B95BCD /* JY_Video_Cache_Configuration.swift in Sources */,
+				A1EFD1022F30A17200B95BCD /* JY_SystemManager + Func.swift in Sources */,
+				A1EFD1032F30A17200B95BCD /* JYClipImageToolView.swift in Sources */,
+				A1EFD1042F30A17200B95BCD /* JY_Video_Player_View.swift in Sources */,
+				A1EFD1052F30A17200B95BCD /* JY_UIFont.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A193F2552F30A10100D55F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JY_GeneralDevelopmentTools/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JYYQLin.JY-GeneralDevelopmentTools";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A193F2562F30A10100D55F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JY_GeneralDevelopmentTools/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JYYQLin.JY-GeneralDevelopmentTools";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A193F2572F30A10100D55F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A193F2582F30A10100D55F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A193F23C2F30A10000D55F5E /* Build configuration list for PBXProject "JY_GeneralDevelopmentTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A193F2572F30A10100D55F5E /* Debug */,
+				A193F2582F30A10100D55F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A193F2542F30A10100D55F5E /* Build configuration list for PBXNativeTarget "JY_GeneralDevelopmentTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A193F2552F30A10100D55F5E /* Debug */,
+				A193F2562F30A10100D55F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A193F2392F30A10000D55F5E /* Project object */;
+}
