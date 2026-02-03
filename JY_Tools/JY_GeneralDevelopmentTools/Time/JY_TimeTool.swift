@@ -8,7 +8,7 @@
 import Foundation
 
 /// 时间处理工具类
-final class JY_TimeTool {
+public final class JY_TimeTool {
     /// 私有化构造方法，避免实例化（工具类建议只使用静态方法）
     private init() {}
     
@@ -21,7 +21,7 @@ final class JY_TimeTool {
 }
 
 /// 给Int扩展时间格式转换方法
-extension Int {
+public extension Int {
     /// 将秒数转换成 分:秒 或 时:分:秒 格式的字符串
     /// - Returns: 格式化后的时间字符串（例如：01:23 或 01:23:45）
     func toTimeString() -> String {
