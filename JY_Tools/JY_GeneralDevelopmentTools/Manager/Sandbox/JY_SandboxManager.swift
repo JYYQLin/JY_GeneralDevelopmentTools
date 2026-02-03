@@ -1,5 +1,5 @@
 //
-//  JY_NetworkManager.swift
+//  JY_SandboxManager.swift
 //  JY_GeneralDevelopmentTools
 //
 //  Created by JYYQLin on 2025/11/6.
@@ -25,7 +25,7 @@ public enum SandboxError: LocalizedError {
     case fileOperationFailed(String) // 文件操作失败
     case permissionDenied(String) // 权限不足
     
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .invalidPath:
             return "无效的沙盒路径"
