@@ -137,7 +137,7 @@ public final class JY_TipHUD: JY_View {
     }
     
     // MARK: - UI布局（内部私有，保持不变）
-    override func yq_add_subviews() {
+    public override func yq_add_subviews() {
         super.yq_add_subviews()
         addSubview(bgView)
         bgView.addSubview(titleLabel)

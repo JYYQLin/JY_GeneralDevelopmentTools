@@ -8,7 +8,7 @@
 import Foundation
 
 /// 日期组件模型（存储Int类型的年月日时分秒）
-struct DateComponentsInt {
+public struct DateComponentsInt {
     let year: Int?
     let month: Int?
     let day: Int?
@@ -18,7 +18,7 @@ struct DateComponentsInt {
 }
 
 /// 日期处理工具类（全静态方法，无需实例化）
-final class JY_DateTool {
+public final class JY_DateTool {
     /// 私有日历实例（统一管理时区，避免重复创建）
     private static let calendar: Calendar = {
         var cal = Calendar.current
@@ -237,7 +237,7 @@ final class JY_DateTool {
 
 // MARK: - 新增：秒数拆分结果模型
 /// 存储天、时、分、秒的组件模型
-struct TimeIntervalComponents {
+public struct TimeIntervalComponents {
     let days: Int
     let hours: Int
     let minutes: Int
@@ -245,7 +245,7 @@ struct TimeIntervalComponents {
 }
 
 // MARK: 新增方法 1 - 时间戳差值计算
-extension JY_DateTool {
+public extension JY_DateTool {
     /// 1.1 传入未来时间戳，返回与当前时间的秒差（若≤当前时间，返回0）
     static func secondsDifference(fromFutureTimestamp timestamp: TimeInterval) -> TimeInterval {
         let currentTimestamp = Date().timeIntervalSince1970

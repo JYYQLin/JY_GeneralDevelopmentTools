@@ -9,7 +9,7 @@ import CommonCrypto
 import Foundation
 
 // MARK: - String 加密/编码扩展（MD5/SHA256/Base64）
-extension String {
+public extension String {
     // MARK: 1. MD5 加密
     /// MD5加密（默认返回小写字符串）
     /// - Parameter uppercase: 是否返回大写，默认false
