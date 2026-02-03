@@ -37,7 +37,7 @@ public final class JY_TimerManager {
     }
 }
 
-extension Notification.Name {
+public extension Notification.Name {
     static let JY_TimerManagerFired = Notification.Name("Notification.Name + JY_TimerManager.TimerFired")
 }
 

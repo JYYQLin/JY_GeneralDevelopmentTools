@@ -8,7 +8,7 @@
 import Foundation
 
 /// 高精度金额工具类（支持分/元双单位传入，默认分单位；支持万/亿单位格式化）
-struct JY_DecimalMoneyTool {
+public struct JY_DecimalMoneyTool {
     // 金额单位枚举（明确区分分/元，避免歧义）
     enum MoneyUnit {
         case fen // 分单位
@@ -315,7 +315,7 @@ extension JY_DecimalMoneyTool {
 }
 
 // 先保留你的 JY_DecimalMoneyTool 主结构，这里只展示修正后的扩展
-extension JY_DecimalMoneyTool {
+public extension JY_DecimalMoneyTool {
     
     /// 将字符串转为保留两位小数的 Decimal 类型，无法转换时返回 Decimal(0)
     /// - Parameter str: 待转换的字符串（支持整数、小数格式，如 "123"、"123.456"、"abc" 等）

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension JY_SystemManager {
+public extension JY_SystemManager {
     /** 跳转应用设置 */
     static func yq_push_application_setting(completionHandler: ((Bool) -> Void)? = nil) {
         guard let url = URL(string: UIApplication.openSettingsURLString) else {

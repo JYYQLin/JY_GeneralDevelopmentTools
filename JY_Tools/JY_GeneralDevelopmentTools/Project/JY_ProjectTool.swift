@@ -8,7 +8,7 @@
 import Foundation
 
 /// App信息工具类（获取项目名称、版本号、构建版本等）
-final class JY_ProjectTool {
+public final class JY_ProjectTool {
     
     
     private static let firstLaunchKey = JY_ProjectTool.getProjectName() + "JY_ProjectTool_FirstLaunchKey"
@@ -100,7 +100,7 @@ final class JY_ProjectTool {
     
 }
 
-extension JY_ProjectTool {
+public extension JY_ProjectTool {
     /// 1. 是否是调试版（Debug）
     static func isDebugMode() -> Bool {
 #if DEBUG
@@ -155,7 +155,7 @@ extension JY_ProjectTool {
 }
 
 // MARK: - 三、App生命周期（首次启动/安装/更新）
-extension JY_ProjectTool {
+public extension JY_ProjectTool {
     /// 1. 是否是App首次启动（冷启动，卸载重装后重置）
     static func isFirstLaunch() -> Bool {
         guard !userDefaults.bool(forKey: firstLaunchKey) else { return false }
@@ -184,7 +184,7 @@ extension JY_ProjectTool {
 }
 
 // MARK: - 四、版本工具（扩展）和 系统设置
-extension JY_ProjectTool {
+public extension JY_ProjectTool {
     /// 对比当前版本是否低于目标版本（如当前1.0.0 < 1.0.1 → true）
     /// - Parameter targetVersion: 目标版本（如"1.0.1"）
     /// - Returns: 是否低于目标版本
@@ -233,7 +233,7 @@ extension JY_ProjectTool {
 }
 
 // MARK: - 便捷扩展（可选，快速调用）
-extension Bundle {
+public extension Bundle {
     // 基础信息
     var appName: String { JY_ProjectTool.getAppName() }
     var appVersion: String { JY_ProjectTool.getAppVersion() }
