@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JY_VerifyTextField: JY_View {
+open class JY_VerifyTextField: JY_View {
     
     var text: String {
         get {
@@ -28,7 +28,7 @@ class JY_VerifyTextField: JY_View {
     private(set) lazy var yq_textField: JY_TextField = JY_TextField()
 }
 
-extension JY_VerifyTextField {
+public extension JY_VerifyTextField {
     override func yq_add_subviews() {
         super.yq_add_subviews()
         
@@ -37,13 +37,13 @@ extension JY_VerifyTextField {
     }
 }
 
-extension JY_VerifyTextField {
+public extension JY_VerifyTextField {
     func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) {
         yq_textField.addTarget(target, action: action, for: controlEvents)
     }
 }
 
-extension JY_VerifyTextField {
+public extension JY_VerifyTextField {
     func set(placeholder: String) {
         
         if yq_placeholder != placeholder {
@@ -61,7 +61,7 @@ extension JY_VerifyTextField {
 }
 
 extension JY_VerifyTextField {
-    override func layoutSubviews() {
+     override open func layoutSubviews() {
         super.layoutSubviews()
         
         yq_bgImageView.frame.origin = {

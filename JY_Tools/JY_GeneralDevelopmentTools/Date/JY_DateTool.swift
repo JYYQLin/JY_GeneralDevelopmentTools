@@ -9,12 +9,12 @@ import Foundation
 
 /// 日期组件模型（存储Int类型的年月日时分秒）
 public struct DateComponentsInt {
-    let year: Int?
-    let month: Int?
-    let day: Int?
-    let hour: Int?
-    let minute: Int?
-    let second: Int?
+    public let year: Int?
+    public let month: Int?
+    public let day: Int?
+    public let hour: Int?
+    public let minute: Int?
+    public let second: Int?
 }
 
 /// 日期处理工具类（全静态方法，无需实例化）
@@ -31,7 +31,7 @@ public final class JY_DateTool {
     ///   - year: 年份（如2025）
     ///   - month: 月份（1-12）
     /// - Returns: 该月天数，非法年月返回0
-    static func daysInMonth(year: Int, month: Int) -> Int {
+    public static func daysInMonth(year: Int, month: Int) -> Int {
         guard (1...12).contains(month), year > 0 else { return 0 }
         
         // 闰年判断规则：能被4整除且不能被100整除，或能被400整除
@@ -46,7 +46,7 @@ public final class JY_DateTool {
     }
     
     // MARK: 2. 快速返回当前月总天数（修复Int转换警告）
-    static func daysInCurrentMonth() -> Int {
+    public static func daysInCurrentMonth() -> Int {
         let now = Date()
         // 修复：component返回Int，无需as? Int转换
         let year = calendar.component(.year, from: now)
@@ -58,7 +58,7 @@ public final class JY_DateTool {
     /// 核心方法：从Date中解析年月日时分秒（Int类型）
     /// - Parameter date: 目标日期
     /// - Returns: 日期组件模型
-    static func parseDateComponents(from date: Date) -> DateComponentsInt {
+    public static func parseDateComponents(from date: Date) -> DateComponentsInt {
         let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         return DateComponentsInt(
             year: components.year,
@@ -71,14 +71,14 @@ public final class JY_DateTool {
     }
     
     /// 3.a 快速返回当天的年月日时分秒
-    static func parseTodayComponents() -> DateComponentsInt {
+    public static func parseTodayComponents() -> DateComponentsInt {
         return parseDateComponents(from: Date())
     }
     
     /// 3.b 从时间戳解析年月日时分秒
     /// - Parameter timestamp: 时间戳（秒级，如1735065600）
     /// - Returns: 日期组件模型（时间戳非法返回空值）
-    static func parseDateComponents(from timestamp: TimeInterval) -> DateComponentsInt {
+    public static func parseDateComponents(from timestamp: TimeInterval) -> DateComponentsInt {
         let date = Date(timeIntervalSince1970: timestamp)
         return parseDateComponents(from: date)
     }
@@ -88,7 +88,7 @@ public final class JY_DateTool {
     ///   - dateString: 日期字符串（如"2025-12-24"）
     ///   - format: 日期格式（如"yyyy-MM-dd"）
     /// - Returns: 日期组件模型（解析失败返回空值）
-    static func parseDateComponents(from dateString: String, format: String) -> DateComponentsInt {
+    public static func parseDateComponents(from dateString: String, format: String) -> DateComponentsInt {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         formatter.timeZone = TimeZone.current
@@ -106,7 +106,7 @@ public final class JY_DateTool {
     ///   - date1: 日期1
     ///   - date2: 日期2
     /// - Returns: 天数差（date1 - date2的结果，正数表示date1在date2之后）
-    static func daysBetween(date1: Date, date2: Date) -> Int {
+    public static func daysBetween(date1: Date, date2: Date) -> Int {
         // 忽略时分秒，只比较年月日
         let startDate = calendar.startOfDay(for: date1)
         let endDate = calendar.startOfDay(for: date2)
@@ -119,7 +119,7 @@ public final class JY_DateTool {
     ///   - timestamp1: 时间戳1（秒级）
     ///   - timestamp2: 时间戳2（秒级）
     /// - Returns: 天数差
-    static func daysBetween(timestamp1: TimeInterval, timestamp2: TimeInterval) -> Int {
+    public static func daysBetween(timestamp1: TimeInterval, timestamp2: TimeInterval) -> Int {
         let date1 = Date(timeIntervalSince1970: timestamp1)
         let date2 = Date(timeIntervalSince1970: timestamp2)
         return daysBetween(date1: date1, date2: date2)
@@ -131,7 +131,7 @@ public final class JY_DateTool {
     ///   - dateStr2: 日期字符串2
     ///   - format: 日期格式（两个字符串格式需一致）
     /// - Returns: 天数差（解析失败返回0）
-    static func daysBetween(dateStr1: String, dateStr2: String, format: String) -> Int {
+    public static func daysBetween(dateStr1: String, dateStr2: String, format: String) -> Int {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         formatter.timeZone = TimeZone.current
@@ -145,7 +145,7 @@ public final class JY_DateTool {
     }
     
     // MARK: 5. 快速返回当前月剩余天数（修复Int转换警告）
-    static func remainingDaysInCurrentMonth(includeToday: Bool) -> Int {
+    public static func remainingDaysInCurrentMonth(includeToday: Bool) -> Int {
         let now = Date()
         // 修复：component返回Int，无需as? Int转换
         let currentDay = calendar.component(.day, from: now)
@@ -157,14 +157,14 @@ public final class JY_DateTool {
     // MARK: 6. 快速获取前一天的日期
     /// - Parameter date: 基准日期（默认当前日期）
     /// - Returns: 前一天的日期（自动处理1月1日边界）
-    static func previousDay(for date: Date = Date()) -> Date {
+    public static func previousDay(for date: Date = Date()) -> Date {
         return calendar.date(byAdding: .day, value: -1, to: date) ?? date
     }
     
     // MARK: 7. 快速获取后一天的日期
     /// - Parameter date: 基准日期（默认当前日期）
     /// - Returns: 后一天的日期（自动处理12月31日边界）
-    static func nextDay(for date: Date = Date()) -> Date {
+    public static func nextDay(for date: Date = Date()) -> Date {
         return calendar.date(byAdding: .day, value: 1, to: date) ?? date
     }
     
@@ -173,7 +173,7 @@ public final class JY_DateTool {
     ///   - dateString: 日期字符串
     ///   - format: 日期格式
     /// - Returns: 时间戳（秒级，解析失败返回0）
-    static func timestamp(from dateString: String, format: String) -> TimeInterval {
+    public static func timestamp(from dateString: String, format: String) -> TimeInterval {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         formatter.timeZone = TimeZone.current
@@ -185,10 +185,40 @@ public final class JY_DateTool {
         return date.timeIntervalSince1970
     }
     
+    /// 将「年」格式的字符串转为Date
+    /// - Parameter yearMonthStr: 格式如 "2024-12" 的字符串
+    /// - Returns: 转换后的Date（默认当月1日0点），转换失败返回nil
+    public static func convertYearStringToDate(_ yearMonthStr: String) -> Date? {
+        let formatter = DateFormatter()
+        // 1. 关键：格式字符串必须和输入完全匹配（yyyy-MM 对应 2024-12）
+        formatter.dateFormat = "yyyy"
+        // 2. 设置locale为en_US_POSIX（避免系统地区/语言影响格式解析，比如中文环境下的“年/月”格式干扰）
+        formatter.locale = Locale(identifier: "zh_CN")
+        // 3. 设置时区（可选，建议显式设置，避免时区偏移导致日期错误）
+        formatter.timeZone = TimeZone.current
+        
+        return formatter.date(from: yearMonthStr)
+    }
+    
+    /// 将「年-月-日」格式的字符串转为Date
+    /// - Parameter yearMonthStr: 格式如 "2024-12" 的字符串
+    /// - Returns: 转换后的Date（默认当月1日0点），转换失败返回nil
+    public static func convertYearMonthDayStringToDate(_ yearMonthStr: String) -> Date? {
+        let formatter = DateFormatter()
+        // 1. 关键：格式字符串必须和输入完全匹配（yyyy-MM 对应 2024-12）
+        formatter.dateFormat = "yyyy-MM-dd"
+        // 2. 设置locale为en_US_POSIX（避免系统地区/语言影响格式解析，比如中文环境下的“年/月”格式干扰）
+        formatter.locale = Locale(identifier: "zh_CN")
+        // 3. 设置时区（可选，建议显式设置，避免时区偏移导致日期错误）
+        formatter.timeZone = TimeZone.current
+        
+        return formatter.date(from: yearMonthStr)
+    }
+    
     /// 将「年-月」格式的字符串转为Date
     /// - Parameter yearMonthStr: 格式如 "2024-12" 的字符串
     /// - Returns: 转换后的Date（默认当月1日0点），转换失败返回nil
-    static func convertYearMonthStringToDate(_ yearMonthStr: String) -> Date? {
+    public static func convertYearMonthStringToDate(_ yearMonthStr: String) -> Date? {
         let formatter = DateFormatter()
         // 1. 关键：格式字符串必须和输入完全匹配（yyyy-MM 对应 2024-12）
         formatter.dateFormat = "yyyy-MM"
@@ -205,7 +235,7 @@ public final class JY_DateTool {
     ///   - originalDateString: 原始日期字符串（必须是 yyyy-MM 格式，如 "2024-12"）
     ///   - newFormat: 目标格式（如 "yyyy年MM月"、"MM/yyyy" 等）
     /// - Returns: 转换后的字符串，转换失败返回 nil（如原始字符串格式错误、新格式不合法）
-    static func convertYearMonthString(
+    public static func convertYearMonthString(
         originalDateString: String, oldFormat: String = "yyyy-MM",
         toNewFormat newFormat: String
     ) -> String {
@@ -230,7 +260,7 @@ public final class JY_DateTool {
     }
     
     // 判断两个日期是否为同一天
-    static func isSameDay(_ date1: Date, _ date2: Date) -> Bool {
+    public static func isSameDay(_ date1: Date, _ date2: Date) -> Bool {
         Calendar.current.isDate(date1, inSameDayAs: date2)
     }
 }

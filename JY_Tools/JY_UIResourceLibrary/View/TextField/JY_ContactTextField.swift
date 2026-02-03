@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class JY_ContactTextField: JY_View {
+open class JY_ContactTextField: JY_View {
     public var text: String {
         get {
             return yq_textField.text ?? ""
@@ -59,8 +59,8 @@ public extension JY_ContactTextField {
     }
 }
 
-public extension JY_ContactTextField {
-    override func layoutSubviews() {
+extension JY_ContactTextField {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         yq_bgImageView.frame.origin = {

@@ -105,7 +105,7 @@ open class JY_View: UIView {
 }
 
 extension UIView {
-    func yq_safeAreaBottom() -> CGFloat {
+    public func yq_safeAreaBottom() -> CGFloat {
         return safeAreaInsets.bottom <= 0 ? 15 : safeAreaInsets.bottom
     }
 }

@@ -10,7 +10,7 @@ import Photos // 明确导入Photos框架，避免漏引
 /// 权限管理工具类（单例）
 public final class JY_AuthorizationManager {
     // 线程安全的单例（Swift 5.1+支持static let天然线程安全）
-    static let shared = JY_AuthorizationManager()
+    public static let shared = JY_AuthorizationManager()
     
     // 私有初始化，防止外部实例化
     private init() {}

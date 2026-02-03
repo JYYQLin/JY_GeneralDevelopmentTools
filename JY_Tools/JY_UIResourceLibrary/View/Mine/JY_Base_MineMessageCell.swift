@@ -7,16 +7,16 @@
 
 import UIKit
 
-class JY_Base_MineMessageCell: JY_Base_MineCell {
+open class JY_Base_MineMessageCell: JY_Base_MineCell {
     
-    private(set) lazy var yq_count: Int = 0
+    public private(set) lazy var yq_count: Int = 0
     
-    private(set) lazy var yq_message_count_label: JY_Label = JY_Label()
-    private(set) lazy var yq_message_count_bgImageView: JY_ImageView = JY_ImageView()
+    public private(set) lazy var yq_message_count_label: JY_Label = JY_Label()
+    public private(set) lazy var yq_message_count_bgImageView: JY_ImageView = JY_ImageView()
 }
 
 extension JY_Base_MineMessageCell {
-    override func yq_add_subviews() {
+    open override func yq_add_subviews() {
         super.yq_add_subviews()
         
         addSubview(yq_message_count_bgImageView)
@@ -25,7 +25,7 @@ extension JY_Base_MineMessageCell {
 }
 
 extension JY_Base_MineMessageCell {
-    func set(count: Int) {
+    public func set(count: Int) {
         yq_count = count
         yq_message_count_label.text = count > 99 ? "99+" : "\(count)"
         yq_message_count_bgImageView.isHidden = count <= 0
@@ -34,7 +34,7 @@ extension JY_Base_MineMessageCell {
 }
 
 extension JY_Base_MineMessageCell {
-    override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         
         yq_message_count_label_frame()

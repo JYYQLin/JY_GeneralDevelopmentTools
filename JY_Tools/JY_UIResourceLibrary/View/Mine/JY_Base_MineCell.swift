@@ -12,9 +12,9 @@ open class JY_Base_MineCell: JY_BaseTableViewCell {
     open override func setSelected(_ selected: Bool, animated: Bool) {}
     open override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
     
-    public lazy var yq_icon_imageView: JY_ImageView = JY_ImageView()
-    public lazy var yq_title_label: JY_Label = JY_Label()
-    public lazy var yq_arrow_imageView: JY_ImageView = JY_ImageView()
+    public private(set) lazy var yq_icon_imageView: JY_ImageView = JY_ImageView()
+    public private(set) lazy var yq_title_label: JY_Label = JY_Label()
+    public private(set) lazy var yq_arrow_imageView: JY_ImageView = JY_ImageView()
 }
 
 extension JY_Base_MineCell {
@@ -62,14 +62,14 @@ extension JY_Base_MineCell {
 }
 
 extension JY_Base_MineCell {
-    func set(iconName: String) {
+    public func set(iconName: String) {
         if yq_icon_imageView.yq_imageName != iconName {
             yq_icon_imageView.yq_imageName = iconName
             yq_icon_imageView_frame()
         }
     }
     
-    func set(title: String) {
+    public func set(title: String) {
         if yq_title_label.text != title {
             yq_title_label.text = title
             yq_title_label_frame()

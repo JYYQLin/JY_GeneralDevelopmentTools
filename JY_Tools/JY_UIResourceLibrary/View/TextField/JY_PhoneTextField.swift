@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JY_PhoneTextField: JY_View {
+open class JY_PhoneTextField: JY_View {
     var text: String {
         get {
             return yq_textField.text ?? ""
@@ -27,7 +27,7 @@ class JY_PhoneTextField: JY_View {
     private(set) lazy var yq_textField: JY_TextField = JY_TextField()
 }
 
-extension JY_PhoneTextField {
+public extension JY_PhoneTextField {
     override func yq_add_subviews() {
         super.yq_add_subviews()
         
@@ -36,13 +36,13 @@ extension JY_PhoneTextField {
     }
 }
 
-extension JY_PhoneTextField {
+public extension JY_PhoneTextField {
     func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) {
         yq_textField.addTarget(target, action: action, for: controlEvents)
     }
 }
 
-extension JY_PhoneTextField {
+public extension JY_PhoneTextField {
     func set(placeholder: String) {
         
         if yq_placeholder != placeholder {
@@ -59,7 +59,7 @@ extension JY_PhoneTextField {
     }
 }
 
-extension JY_PhoneTextField {
+public extension JY_PhoneTextField {
     override func layoutSubviews() {
         super.layoutSubviews()
         
