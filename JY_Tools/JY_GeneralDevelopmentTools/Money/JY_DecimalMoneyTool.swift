@@ -373,3 +373,14 @@ public extension JY_DecimalMoneyTool {
         return resultDecimal
     }
 }
+
+public extension JY_DecimalMoneyTool {
+    static func safeConvertToDecimal(_ str: String) -> Decimal {
+        // 去除字符串中的非数字字符（可选，根据业务需求调整，比如处理"¥100"→"100"）
+        let pureStr = str.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !pureStr.isEmpty, let decimal = Decimal(string: pureStr) else {
+            return 0
+        }
+        return decimal
+    }
+}

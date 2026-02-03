@@ -9,12 +9,12 @@ import CommonCrypto
 import Foundation
 
 // MARK: - String 加密/编码扩展（MD5/SHA256/Base64）
-public extension String {
+extension String {
     // MARK: 1. MD5 加密
     /// MD5加密（默认返回小写字符串）
     /// - Parameter uppercase: 是否返回大写，默认false
     /// - Returns: 加密后的字符串（失败返回空字符串）
-    func yq_md5(uppercase: Bool = false) -> String {
+    public func yq_md5(uppercase: Bool = false) -> String {
         guard let data = self.data(using: .utf8) else {
             print("MD5加密失败：字符串转Data失败")
             return ""
@@ -35,7 +35,7 @@ public extension String {
     /// SHA256加密（默认返回小写字符串）
     /// - Parameter uppercase: 是否返回大写，默认false
     /// - Returns: 加密后的字符串（失败返回空字符串）
-    func yq_sha256(uppercase: Bool = false) -> String {
+    public func yq_sha256(uppercase: Bool = false) -> String {
         guard let data = self.data(using: .utf8) else {
             print("SHA256加密失败：字符串转Data失败")
             return ""
@@ -55,7 +55,7 @@ public extension String {
     // MARK: 3. Base64 编码
     /// Base64编码（默认使用utf8编码）
     /// - Returns: 编码后的字符串（失败返回空字符串）
-    func yq_base64Encoded() -> String {
+    public func yq_base64Encoded() -> String {
         guard let data = self.data(using: .utf8) else {
             print("Base64编码失败：字符串转Data失败")
             return self
@@ -66,7 +66,7 @@ public extension String {
     // MARK: 4. Base64 解码
     /// Base64解码（默认使用utf8解码）
     /// - Returns: 解码后的字符串（失败返回nil）
-    func yq_base64Decoded() -> String? {
+    public func yq_base64Decoded() -> String? {
         guard let data = Data(base64Encoded: self) else {
             print("Base64解码失败：无效的Base64字符串")
             return nil

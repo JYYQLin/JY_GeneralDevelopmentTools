@@ -8,7 +8,7 @@
 import UIKit
 
 open class JY_PhoneTextField: JY_View {
-    var text: String {
+    public var text: String {
         get {
             return yq_textField.text ?? ""
         }
@@ -27,8 +27,8 @@ open class JY_PhoneTextField: JY_View {
     private(set) lazy var yq_textField: JY_TextField = JY_TextField()
 }
 
-public extension JY_PhoneTextField {
-    override func yq_add_subviews() {
+extension JY_PhoneTextField {
+    open override func yq_add_subviews() {
         super.yq_add_subviews()
         
         addSubview(yq_bgImageView)
@@ -59,8 +59,8 @@ public extension JY_PhoneTextField {
     }
 }
 
-public extension JY_PhoneTextField {
-    override func layoutSubviews() {
+extension JY_PhoneTextField {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         
         yq_bgImageView.frame.origin = {

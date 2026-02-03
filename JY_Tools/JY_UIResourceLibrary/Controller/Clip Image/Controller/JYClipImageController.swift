@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class JYClipImageController: JY_BaseController {
+public class JYClipImageController: JY_BaseController {
     
     public var yq_select_image_click_block: ((_ image: UIImage) -> Void)?
     

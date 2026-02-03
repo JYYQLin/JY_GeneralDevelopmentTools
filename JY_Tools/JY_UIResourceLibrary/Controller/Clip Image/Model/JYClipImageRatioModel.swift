@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JYClipImageRatioModel: Equatable {
+public class JYClipImageRatioModel: Equatable {
    private(set) lazy var yq_title: String = ""
     
     private(set) lazy var yq_width_height_ratio: CGFloat = 0
@@ -30,13 +30,13 @@ class JYClipImageRatioModel: Equatable {
     }
 }
 
-extension JYClipImageRatioModel {
+public extension JYClipImageRatioModel {
     static func == (lhs: JYClipImageRatioModel, rhs: JYClipImageRatioModel) -> Bool {
         return lhs.yq_width_height_ratio == rhs.yq_width_height_ratio && lhs.yq_title == rhs.yq_title && lhs.yq_is_circle == rhs.yq_is_circle
     }
 }
 
-extension JYClipImageRatioModel {
+public extension JYClipImageRatioModel {
     
     static func yq_custom() -> JYClipImageRatioModel {
         let model = JYClipImageRatioModel()

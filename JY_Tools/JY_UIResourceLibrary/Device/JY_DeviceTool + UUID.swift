@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension JY_DeviceTool {
+public extension JY_DeviceTool {
     /*
      无授权需求 → 用 IDFV（同一开发者 App 共享）
      
@@ -24,7 +24,7 @@ extension JY_DeviceTool {
 import AdSupport
 import AppTrackingTransparency
 
-extension JY_DeviceTool {
+public extension JY_DeviceTool {
     /**
      需跨 App 标识（广告 / 归因）→ 用 IDFA（需用户授权）；
      
@@ -80,7 +80,7 @@ extension JY_DeviceTool {
 
 import Security
 
-extension JY_DeviceTool {
+public extension JY_DeviceTool {
     /**
      需 “应用 + 设备” 永久唯一 → 用 Keychain 存储自定义 UUID（最推荐）；
      

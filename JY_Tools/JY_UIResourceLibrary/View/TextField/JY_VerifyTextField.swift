@@ -9,7 +9,7 @@ import UIKit
 
 open class JY_VerifyTextField: JY_View {
     
-    var text: String {
+    public var text: String {
         get {
             return yq_textField.text ?? ""
         }

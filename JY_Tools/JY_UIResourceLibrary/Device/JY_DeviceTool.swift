@@ -8,7 +8,7 @@
 import UIKit
 
 /// JSON处理工具类（iOS开发通用）
-final class JY_DeviceTool {
+public final class JY_DeviceTool {
     
     // MARK: - 私有化构造器，禁止实例化
     private init() {}
@@ -23,7 +23,7 @@ final class JY_DeviceTool {
 }
 
 // MARK: - JY_DeviceTool 扩展（快速获取设备信息）
-extension JY_DeviceTool {
+public extension JY_DeviceTool {
     /// 快速获取当前设备的JY_DeviceType
     static func currentDeviceType() -> JY_DeviceType {
         return UIDevice.currentDeviceType()
@@ -80,7 +80,7 @@ public extension UIDevice {
 }
 
 
-extension UIDevice {
+public extension UIDevice {
     // 设备信息扩展
     var isJailbroken: Bool { JY_ProjectTool.isJailbroken() }
     var isSimulator: Bool { JY_ProjectTool.isSimulator() }
