@@ -7,17 +7,17 @@
 
 import UIKit
 
-class JY_Base_SettingCell: JY_BaseTableViewCell {
+public class JY_Base_SettingCell: JY_BaseTableViewCell {
     
     open override func setSelected(_ selected: Bool, animated: Bool) {}
     open override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
     
-    private(set) lazy var yq_title_label: JY_Label = JY_Label()
-    private(set) lazy var yq_arrow_imageView: JY_ImageView = JY_ImageView()
+    public private(set) lazy var yq_title_label: JY_Label = JY_Label()
+    public private(set) lazy var yq_arrow_imageView: JY_ImageView = JY_ImageView()
 }
 
 extension JY_Base_SettingCell {
-    open override func yq_add_subviews() {
+    @objc open override func yq_add_subviews() {
         super.yq_add_subviews()
         
         contentView.addSubview(yq_title_label)
@@ -53,7 +53,7 @@ extension JY_Base_SettingCell {
 
 extension JY_Base_SettingCell {
     
-    func set(title: String) {
+    public func set(title: String) {
         if yq_title_label.text != title {
             yq_title_label.text = title
             yq_title_label_frame()

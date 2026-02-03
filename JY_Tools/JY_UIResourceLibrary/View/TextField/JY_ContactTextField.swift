@@ -7,8 +7,8 @@
 
 import UIKit
 
-class JY_ContactTextField: JY_View {
-    var text: String {
+public class JY_ContactTextField: JY_View {
+    public var text: String {
         get {
             return yq_textField.text ?? ""
         }
@@ -27,7 +27,7 @@ class JY_ContactTextField: JY_View {
     private(set) lazy var yq_textField: JY_TextField = JY_TextField()
 }
 
-extension JY_ContactTextField {
+public extension JY_ContactTextField {
     override func yq_add_subviews() {
         super.yq_add_subviews()
         
@@ -36,13 +36,13 @@ extension JY_ContactTextField {
     }
 }
 
-extension JY_ContactTextField {
+public extension JY_ContactTextField {
     func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) {
         yq_textField.addTarget(target, action: action, for: controlEvents)
     }
 }
 
-extension JY_ContactTextField {
+public extension JY_ContactTextField {
     func set(placeholder: String) {
         
         if yq_placeholder != placeholder {
@@ -59,7 +59,7 @@ extension JY_ContactTextField {
     }
 }
 
-extension JY_ContactTextField {
+public extension JY_ContactTextField {
     override func layoutSubviews() {
         super.layoutSubviews()
         

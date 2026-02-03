@@ -10,7 +10,7 @@ import Foundation
 /// 高精度金额工具类（支持分/元双单位传入，默认分单位；支持万/亿单位格式化）
 public struct JY_DecimalMoneyTool {
     // 金额单位枚举（明确区分分/元，避免歧义）
-    enum MoneyUnit {
+    public enum MoneyUnit {
         case fen // 分单位
         case yuan // 元单位
     }
@@ -24,7 +24,7 @@ public struct JY_DecimalMoneyTool {
     ///   - currencySymbol: 货币符号（如"¥"、"$"，传nil不显示，默认nil）
     ///   - defaultText: 异常场景兜底文本（默认"0.00"）
     /// - Returns: 格式化后的标准价格字符串
-    static func formatFenToNormalPrice(
+    public static func formatFenToNormalPrice(
         moneyString: String?,
         unit: MoneyUnit = .fen,
         showThousandSeparator: Bool = true,
@@ -52,7 +52,7 @@ public struct JY_DecimalMoneyTool {
     ///   - currencySymbol: 货币符号（默认nil）
     ///   - defaultText: 异常兜底文本（默认"0.00"）
     /// - Returns: 格式化后的余额价格字符串
-    static func calculateBalance(
+    public static func calculateBalance(
         totalMoneyString: String?,
         subtractMoneyString: String?,
         unit: MoneyUnit = .fen,
@@ -77,7 +77,7 @@ public struct JY_DecimalMoneyTool {
     }
     
     // MARK: - 新增：辅助方法 → 清理格式化字符串（去除千分位逗号、空白字符，保留纯数字+小数点）
-    static func cleanFormattedMoneyString(_ moneyString: String?) -> String {
+    public static func cleanFormattedMoneyString(_ moneyString: String?) -> String {
         guard let str = moneyString, !str.trimmingCharacters(in: .whitespaces).isEmpty else {
             return "0"
         }
@@ -98,7 +98,7 @@ public struct JY_DecimalMoneyTool {
     ///   - unit: 金额单位（默认.fen，分单位；两个金额需统一单位）
     ///   - defaultRatio: 异常兜底比例（默认"0.00"）
     /// - Returns: 保留两位小数的比例字符串（如"0.68"对应68%）
-    static func calculateDepositRatio(
+    public static func calculateDepositRatio(
         totalMoneyString: String?,
         depositMoneyString: String?,
         unit: MoneyUnit = .fen,
@@ -138,7 +138,7 @@ public struct JY_DecimalMoneyTool {
     ///   - unit: 金额单位（默认.fen，分单位）
     ///   - days: 天数（Int，不可为0）
     /// - Returns: 日均金额（Decimal，元单位，异常返回0）
-    static func calculateDailyAverage(
+    public static func calculateDailyAverage(
         moneyString: String?,
         unit: MoneyUnit = .fen,
         days: Int
@@ -156,7 +156,7 @@ public struct JY_DecimalMoneyTool {
     ///   - unit: 金额单位（默认.fen，分单位）
     ///   - days: 天数（Int，不可为0）
     /// - Returns: 日均金额（Decimal，元单位，异常返回0）
-    static func calculateDailyAverage(
+    public static func calculateDailyAverage(
         moneyDecimal: Decimal,
         unit: MoneyUnit = .fen,
         days: Int
@@ -179,7 +179,7 @@ public struct JY_DecimalMoneyTool {
     ///   - currencySymbol: 货币符号（如"¥"，传nil不显示，默认nil）
     ///   - defaultText: 异常兜底文本（默认"0.00"）
     /// - Returns: 智能格式化后的价格字符串（负数示例："-¥1.23万"、"-9999.00"）
-    static func formatFenToSmartPrice(
+    public static func formatFenToSmartPrice(
         moneyString: String?,
         unit: MoneyUnit = .fen,
         currencySymbol: String? = nil,
