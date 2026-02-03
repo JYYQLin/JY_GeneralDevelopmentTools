@@ -7,9 +7,9 @@
 
 import UIKit
 
-class JYClipImageController: JY_BaseController {
+open class JYClipImageController: JY_BaseController {
     
-    var yq_select_image_click_block: ((_ image: UIImage) -> Void)?
+    public var yq_select_image_click_block: ((_ image: UIImage) -> Void)?
     
 //    // 隐藏状态栏
 //     override var prefersStatusBarHidden: Bool { true }
@@ -18,11 +18,11 @@ class JYClipImageController: JY_BaseController {
 //     // 延缓系统边缘手势（避免与裁剪手势冲突）
 //     override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge { [.top, .bottom] }
      // 支持的屏幕方向（iPhone仅竖屏，iPad支持全方向）
-     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
          JY_DeviceTool.isIPhone() ? .portrait : .all
      }
     
-    private(set) lazy var yq_bottom_navigationBar: JYClipImageBottomNavigationBar = {
+    lazy var yq_bottom_navigationBar: JYClipImageBottomNavigationBar = {
         let view = JYClipImageBottomNavigationBar()
         
         view.yq_done_button_add_target(self, action: #selector(yq_done_click), for: .touchUpInside)
@@ -31,7 +31,7 @@ class JYClipImageController: JY_BaseController {
         return view
     }()
     
-    private(set) lazy var yq_clip_tool_view: JYClipImageToolView = {
+    lazy var yq_clip_tool_view: JYClipImageToolView = {
         let view = JYClipImageToolView()
         
         view.yq_rotate_button_add_target(self, action: #selector(yq_rotate_click), for: .touchUpInside)
@@ -44,7 +44,7 @@ class JYClipImageController: JY_BaseController {
         return view
     }()
     
-    private(set) lazy var yq_detail_view: JYClipImageView = {
+    lazy var yq_detail_view: JYClipImageView = {
         let view = JYClipImageView()
         
         return view
@@ -64,18 +64,18 @@ class JYClipImageController: JY_BaseController {
         yq_detail_view.set(image: image)
     }
     
-    @MainActor required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    @MainActor required public init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
 extension JYClipImageController {
     
-    override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         yq_detail_view.set(ratio: yq_clip_tool_view.yq_current_radio)
@@ -83,20 +83,20 @@ extension JYClipImageController {
 }
 
 extension JYClipImageController {
-    override func yq_setInterface() {
+    open override func yq_setInterface() {
         super.yq_setInterface()
         
         yq_contentView.addSubview(yq_detail_view)
     }
     
-    override func yq_setNavigationBar() {
+    open override func yq_setNavigationBar() {
         super.yq_setNavigationBar()
         
         view.addSubview(yq_bottom_navigationBar)
         view.addSubview(yq_clip_tool_view)
     }
     
-    override func yq_layoutSubviews() {
+    open override func yq_layoutSubviews() {
         super.yq_layoutSubviews()
                 
         view.backgroundColor = UIColor.yq_color(hexString: "0x010101")
@@ -134,8 +134,8 @@ extension JYClipImageController {
 }
 
 extension JYClipImageController {
-    func yq_hidden_bottom_navigationBar() {
-        yq_bottom_navigationBar.isHidden = true        
+   public func yq_hidden_bottom_navigationBar() {
+        yq_bottom_navigationBar.isHidden = true
         yq_layoutSubviews()
     }
 }

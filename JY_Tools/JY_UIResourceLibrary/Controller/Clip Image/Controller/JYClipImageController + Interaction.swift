@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension JYClipImageController {
+public extension JYClipImageController {
     
     @objc func yq_done_click() {
        let a = yq_detail_view.yq_clip_image()

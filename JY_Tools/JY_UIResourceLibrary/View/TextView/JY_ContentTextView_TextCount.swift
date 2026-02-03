@@ -7,28 +7,28 @@
 
 import UIKit
 
-class JY_ContentTextView_TextCount: JY_View {
+open class JY_ContentTextView_TextCount: JY_View {
     
-    var yq_textView_did_change_block: (() -> Void)?
+    public var yq_textView_did_change_block: (() -> Void)?
     
-    private lazy var yq_placeholder: String = "请填写您的反馈意见或问题，每一条我们都会认真查看（\(yq_max_text_count)字以内）"
-    private(set) lazy var yq_max_text_count: Int = 500
-    private lazy var yq_bg_color: UIColor = UIColor.yq_color(hexString: "0xFEFDFE")
-    private lazy var yq_tip_text_color: UIColor = UIColor.yq_color(hexString: "0x9E9E9E")
+    public lazy var yq_placeholder: String = "请填写您的反馈意见或问题，每一条我们都会认真查看（\(yq_max_text_count)字以内）"
+    public lazy var yq_max_text_count: Int = 500
+    public lazy var yq_bg_color: UIColor = UIColor.yq_color(hexString: "0xFEFDFE")
+    public lazy var yq_tip_text_color: UIColor = UIColor.yq_color(hexString: "0x9E9E9E")
     
-    var text: String {
+    public var text: String {
         get {
             return yq_textView.text
         }
     }
     
-    private lazy var yq_bg_imageView: JY_ImageView = JY_ImageView()
-    private lazy var yq_textView: UITextView = UITextView()
-    private(set) lazy var yq_tip_label: JY_Label = JY_Label()
+    public lazy var yq_bg_imageView: JY_ImageView = JY_ImageView()
+    public lazy var yq_textView: UITextView = UITextView()
+    public lazy var yq_tip_label: JY_Label = JY_Label()
 }
 
 
-extension JY_ContentTextView_TextCount {
+public extension JY_ContentTextView_TextCount {
     func set(maxTextCount: Int) {
         yq_max_text_count = maxTextCount
         layoutSubviews()
@@ -77,7 +77,7 @@ extension JY_ContentTextView_TextCount {
 }
 
 extension JY_ContentTextView_TextCount {
-    override func yq_add_subviews() {
+   open override func yq_add_subviews() {
         super.yq_add_subviews()
         
         addSubview(yq_bg_imageView)
@@ -89,7 +89,7 @@ extension JY_ContentTextView_TextCount {
 }
 
 extension JY_ContentTextView_TextCount {
-    override func layoutSubviews() {
+   open override func layoutSubviews() {
         super.yq_add_subviews()
         
         yq_bg_imageView_frame()
@@ -130,7 +130,7 @@ extension JY_ContentTextView_TextCount {
 }
 
 extension JY_ContentTextView_TextCount: UITextViewDelegate {
-    func textViewDidChange(_ textView: UITextView) {
+   public func textViewDidChange(_ textView: UITextView) {
         yq_tip_label_frame()
         yq_textView_did_change_block?()
     }

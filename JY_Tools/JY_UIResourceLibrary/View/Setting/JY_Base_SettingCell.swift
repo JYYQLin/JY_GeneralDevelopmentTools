@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class JY_Base_SettingCell: JY_BaseTableViewCell {
+open class JY_Base_SettingCell: JY_BaseTableViewCell {
     
     open override func setSelected(_ selected: Bool, animated: Bool) {}
     open override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
