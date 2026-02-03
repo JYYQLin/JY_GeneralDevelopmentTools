@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - UIWindow 扩展（获取当前主窗口，优化容错）
 extension UIWindow {
-    static func yq_firstWindow() -> UIWindow? {
+    public static func yq_firstWindow() -> UIWindow? {
         if #available(iOS 13.0, *) {
             return UIApplication.shared.connectedScenes
                 .compactMap { $0 as? UIWindowScene }

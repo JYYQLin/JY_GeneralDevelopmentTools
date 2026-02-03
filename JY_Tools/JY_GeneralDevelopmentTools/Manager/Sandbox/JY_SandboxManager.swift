@@ -55,7 +55,7 @@ public final class JY_SandboxManager {
     private let fileQueue = DispatchQueue.global(qos: .utility)
     
     // MARK: 1. 获取沙盒基础路径
-    func path(for directory: SandboxDirectory) -> String? {
+    public func path(for directory: SandboxDirectory) -> String? {
         switch directory {
         case .documents:
             return fileManager.urls(for: .documentDirectory, in: .userDomainMask).first?.path
@@ -69,13 +69,13 @@ public final class JY_SandboxManager {
     }
     
     // MARK: 2. 拼接文件名与沙盒路径
-    func fullPath(for fileName: String, in directory: SandboxDirectory) -> String? {
+    public func fullPath(for fileName: String, in directory: SandboxDirectory) -> String? {
         guard let basePath = path(for: directory) else { return nil }
         return (basePath as NSString).appendingPathComponent(fileName)
     }
     
     // MARK: 3. 计算单个文件大小（字节）
-    func fileSize(at path: String) -> AnyPublisher<Int64, Error> {
+    public func fileSize(at path: String) -> AnyPublisher<Int64, Error> {
         Future<Int64, Error> { [weak self] promise in
             guard let self = self else {
                 promise(.failure(SandboxError.fileOperationFailed("沙盒管理器已释放")))
@@ -112,7 +112,7 @@ public final class JY_SandboxManager {
     }
     
     // MARK: 4. 计算文件夹总大小（包含子文件夹）
-    func folderSize(at path: String) -> AnyPublisher<Int64, Error> {
+    public func folderSize(at path: String) -> AnyPublisher<Int64, Error> {
         Future<Int64, Error> { [weak self] promise in
             guard let self = self else {
                 promise(.failure(SandboxError.fileOperationFailed("沙盒管理器已释放")))
@@ -166,28 +166,28 @@ public final class JY_SandboxManager {
     }
     
     // MARK: 5. 快速获取指定沙盒目录大小
-    func documentsSize() -> AnyPublisher<Int64, Error> {
+    public func documentsSize() -> AnyPublisher<Int64, Error> {
         guard let path = path(for: .documents) else {
             return Fail(error: SandboxError.invalidPath).eraseToAnyPublisher()
         }
         return folderSize(at: path)
     }
     
-    func librarySize() -> AnyPublisher<Int64, Error> {
+    public func librarySize() -> AnyPublisher<Int64, Error> {
         guard let path = path(for: .library) else {
             return Fail(error: SandboxError.invalidPath).eraseToAnyPublisher()
         }
         return folderSize(at: path)
     }
     
-    func cacheSize() -> AnyPublisher<Int64, Error> {
+    public func cacheSize() -> AnyPublisher<Int64, Error> {
         guard let path = path(for: .cache) else {
             return Fail(error: SandboxError.invalidPath).eraseToAnyPublisher()
         }
         return folderSize(at: path)
     }
     
-    func tempSize() -> AnyPublisher<Int64, Error> {
+    public func tempSize() -> AnyPublisher<Int64, Error> {
         guard let path = path(for: .temp) else {
             return Fail(error: SandboxError.invalidPath).eraseToAnyPublisher()
         }
@@ -195,7 +195,7 @@ public final class JY_SandboxManager {
     }
     
     // MARK: 6. 删除单个文件（修复权限问题）
-    func deleteFile(at path: String) -> AnyPublisher<Bool, Error> {
+    public func deleteFile(at path: String) -> AnyPublisher<Bool, Error> {
         Future<Bool, Error> { [weak self] promise in
             guard let self = self else {
                 promise(.failure(SandboxError.fileOperationFailed("沙盒管理器已释放")))
@@ -246,7 +246,7 @@ public final class JY_SandboxManager {
     }
     
     // MARK: 7. 删除文件夹（修复权限+递归删除）
-    func deleteFolder(at path: String) -> AnyPublisher<Bool, Error> {
+    public func deleteFolder(at path: String) -> AnyPublisher<Bool, Error> {
         Future<Bool, Error> { [weak self] promise in
             guard let self = self else {
                 promise(.failure(SandboxError.fileOperationFailed("沙盒管理器已释放")))
@@ -279,7 +279,7 @@ public final class JY_SandboxManager {
     }
     
     // MARK: 8. 快速删除沙盒目录下所有内容（保留目录本身）
-    func deleteAllInDirectory(_ directory: SandboxDirectory) -> AnyPublisher<Bool, Error> {
+    public func deleteAllInDirectory(_ directory: SandboxDirectory) -> AnyPublisher<Bool, Error> {
         Future<Bool, Error> { [weak self] promise in
             guard let self = self, let basePath = self.path(for: directory) else {
                 promise(.failure(SandboxError.invalidPath))
@@ -334,28 +334,28 @@ public final class JY_SandboxManager {
     }
     
     // MARK: 闭包版本（兼容不熟悉Combine的场景）
-    func fileSize(at path: String, completion: @escaping (Result<Int64, Error>) -> Void) {
+    public func fileSize(at path: String, completion: @escaping (Result<Int64, Error>) -> Void) {
         _ = fileSize(at: path).sink(
             receiveCompletion: { if case .failure(let e) = $0 { completion(.failure(e)) } },
             receiveValue: { completion(.success($0)) }
         )
     }
     
-    func folderSize(at path: String, completion: @escaping (Result<Int64, Error>) -> Void) {
+    public func folderSize(at path: String, completion: @escaping (Result<Int64, Error>) -> Void) {
         _ = folderSize(at: path).sink(
             receiveCompletion: { if case .failure(let e) = $0 { completion(.failure(e)) } },
             receiveValue: { completion(.success($0)) }
         )
     }
     
-    func deleteFile(at path: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+    public func deleteFile(at path: String, completion: @escaping (Result<Bool, Error>) -> Void) {
         _ = deleteFile(at: path).sink(
             receiveCompletion: { if case .failure(let e) = $0 { completion(.failure(e)) } },
             receiveValue: { completion(.success($0)) }
         )
     }
     
-    func deleteAllInDirectory(_ directory: SandboxDirectory, completion: @escaping (Result<Bool, Error>) -> Void) {
+    public func deleteAllInDirectory(_ directory: SandboxDirectory, completion: @escaping (Result<Bool, Error>) -> Void) {
         _ = deleteAllInDirectory(directory).sink(
             receiveCompletion: { if case .failure(let e) = $0 { completion(.failure(e)) } },
             receiveValue: { completion(.success($0)) }
