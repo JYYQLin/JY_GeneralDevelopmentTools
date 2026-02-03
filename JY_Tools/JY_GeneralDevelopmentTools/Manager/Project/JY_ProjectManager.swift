@@ -7,7 +7,7 @@
 
 import Foundation
 
-class JY_ProjectManager {
+public class JY_ProjectManager {
     
     // 静态常量作为单例的唯一访问点
     public static let shared = JY_ProjectManager()
@@ -20,7 +20,7 @@ class JY_ProjectManager {
 }
 
 //  MARK: 设置测试环境
-extension JY_ProjectManager {
+public extension JY_ProjectManager {
     func set(isTestEnvironment: Bool) {
         is_test_environment = isTestEnvironment
     }

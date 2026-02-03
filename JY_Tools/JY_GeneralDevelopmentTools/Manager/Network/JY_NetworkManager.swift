@@ -10,14 +10,14 @@ import Combine
 import Network
 
 // MARK: - 网络类型枚举（无核心修改，仅注释优化）
-enum JYConnectionType: CustomStringConvertible {
+public enum JYConnectionType: CustomStringConvertible {
     case unknown          // 未知
     case notConnected     // 无网络
     case wifi             // WiFi
     case cellular         // 蜂窝数据（4G/5G等）
     case wiredEthernet    // 有线网络（如iPad以太网适配器）
     
-    var description: String {
+    public var description: String {
         switch self {
         case .unknown: return "未知网络"
         case .notConnected: return "无网络"
@@ -256,7 +256,7 @@ public final class JY_NetworkManager {
 }
 
 // MARK: - 通知名扩展（新增断连通知 + 语义化）
-extension Notification.Name {
+public extension Notification.Name {
     /// 网络全量状态变化通知（仅当状态真变化时触发：类型/连接/昂贵/低数据模式）
     static let JY_NetworkStatusChanged = Notification.Name("JY_NetworkManager_StatusChanged")
     

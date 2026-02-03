@@ -8,7 +8,7 @@
 import Photos // 明确导入Photos框架，避免漏引
 
 /// 权限管理工具类（单例）
-final class JY_AuthorizationManager {
+public final class JY_AuthorizationManager {
     // 线程安全的单例（Swift 5.1+支持static let天然线程安全）
     static let shared = JY_AuthorizationManager()
     
@@ -17,7 +17,7 @@ final class JY_AuthorizationManager {
 }
 
 // MARK: - 相册权限相关
-extension JY_AuthorizationManager {
+public extension JY_AuthorizationManager {
     /// 请求相册访问权限
     /// - Parameter completion: 权限请求完成回调（主线程执行）
     ///   - authorized: 是否拥有有效访问权限（authorized/limited为true，其余为false）

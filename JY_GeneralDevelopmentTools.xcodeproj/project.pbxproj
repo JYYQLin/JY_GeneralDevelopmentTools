@@ -13,7 +13,6 @@
 		A1EFD0B72F30A17200B95BCD /* JY_Video_Player_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0562F30A17200B95BCD /* JY_Video_Player_State.swift */; };
 		A1EFD0B82F30A17200B95BCD /* JY_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD06D2F30A17200B95BCD /* JY_UIImage.swift */; };
 		A1EFD0B92F30A17200B95BCD /* JY_Video_Preload_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0612F30A17200B95BCD /* JY_Video_Preload_Manager.swift */; };
-		A1EFD0BA2F30A17200B95BCD /* JY_IAPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0132F30A17200B95BCD /* JY_IAPConfig.swift */; };
 		A1EFD0BB2F30A17200B95BCD /* JY_WKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0942F30A17200B95BCD /* JY_WKWebView.swift */; };
 		A1EFD0BC2F30A17200B95BCD /* JYExtension + AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD05A2F30A17200B95BCD /* JYExtension + AVPlayerItem.swift */; };
 		A1EFD0BD2F30A17200B95BCD /* JY_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD06B2F30A17200B95BCD /* JY_String.swift */; };
@@ -72,7 +71,6 @@
 		A1EFD0F22F30A17200B95BCD /* JY_Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD08B2F30A17200B95BCD /* JY_Slider.swift */; };
 		A1EFD0F32F30A17200B95BCD /* JY_Video_Cache_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD04C2F30A17200B95BCD /* JY_Video_Cache_Handler.swift */; };
 		A1EFD0F42F30A17200B95BCD /* JY_Base_SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0892F30A17200B95BCD /* JY_Base_SettingCell.swift */; };
-		A1EFD0F52F30A17200B95BCD /* JY_IAPTransactionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0142F30A17200B95BCD /* JY_IAPTransactionRecord.swift */; };
 		A1EFD0F62F30A17200B95BCD /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0742F30A17200B95BCD /* UITextView+Placeholder.m */; };
 		A1EFD0F72F30A17200B95BCD /* JY_BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0322F30A17200B95BCD /* JY_BaseController.swift */; };
 		A1EFD0F82F30A17200B95BCD /* JY_SandboxManager + Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFD0232F30A17200B95BCD /* JY_SandboxManager + Image.swift */; };
@@ -122,8 +120,6 @@
 		A1EFD00D2F30A17200B95BCD /* JY_CommonCryptoTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_CommonCryptoTool.swift; sourceTree = "<group>"; };
 		A1EFD00F2F30A17200B95BCD /* JY_DateTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_DateTool.swift; sourceTree = "<group>"; };
 		A1EFD0112F30A17200B95BCD /* JY_Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_Int.swift; sourceTree = "<group>"; };
-		A1EFD0132F30A17200B95BCD /* JY_IAPConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_IAPConfig.swift; sourceTree = "<group>"; };
-		A1EFD0142F30A17200B95BCD /* JY_IAPTransactionRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_IAPTransactionRecord.swift; sourceTree = "<group>"; };
 		A1EFD0152F30A17200B95BCD /* JY_InAppPurchasesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_InAppPurchasesManager.swift; sourceTree = "<group>"; };
 		A1EFD0162F30A17200B95BCD /* JY_InAppPurchasesManager + Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JY_InAppPurchasesManager + Enum.swift"; sourceTree = "<group>"; };
 		A1EFD0182F30A17200B95BCD /* JY_JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JY_JsonUtils.swift; sourceTree = "<group>"; };
@@ -306,8 +302,6 @@
 		A1EFD0172F30A17200B95BCD /* In-app Purchases */ = {
 			isa = PBXGroup;
 			children = (
-				A1EFD0132F30A17200B95BCD /* JY_IAPConfig.swift */,
-				A1EFD0142F30A17200B95BCD /* JY_IAPTransactionRecord.swift */,
 				A1EFD0152F30A17200B95BCD /* JY_InAppPurchasesManager.swift */,
 				A1EFD0162F30A17200B95BCD /* JY_InAppPurchasesManager + Enum.swift */,
 			);
@@ -957,7 +951,6 @@
 				A1EFD0B72F30A17200B95BCD /* JY_Video_Player_State.swift in Sources */,
 				A1EFD0B82F30A17200B95BCD /* JY_UIImage.swift in Sources */,
 				A1EFD0B92F30A17200B95BCD /* JY_Video_Preload_Manager.swift in Sources */,
-				A1EFD0BA2F30A17200B95BCD /* JY_IAPConfig.swift in Sources */,
 				A1EFD0BB2F30A17200B95BCD /* JY_WKWebView.swift in Sources */,
 				A1EFD0BC2F30A17200B95BCD /* JYExtension + AVPlayerItem.swift in Sources */,
 				A1EFD0BD2F30A17200B95BCD /* JY_String.swift in Sources */,
@@ -1016,7 +1009,6 @@
 				A1EFD0F22F30A17200B95BCD /* JY_Slider.swift in Sources */,
 				A1EFD0F32F30A17200B95BCD /* JY_Video_Cache_Handler.swift in Sources */,
 				A1EFD0F42F30A17200B95BCD /* JY_Base_SettingCell.swift in Sources */,
-				A1EFD0F52F30A17200B95BCD /* JY_IAPTransactionRecord.swift in Sources */,
 				A1EFD0F62F30A17200B95BCD /* UITextView+Placeholder.m in Sources */,
 				A1EFD0F72F30A17200B95BCD /* JY_BaseController.swift in Sources */,
 				A1EFD0F82F30A17200B95BCD /* JY_SandboxManager + Image.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 // MARK: - 沙盒目录枚举
-enum SandboxDirectory: String, CaseIterable {
+public enum SandboxDirectory: String, CaseIterable {
     case documents  // 应用文档目录
     case library    // 应用库目录
     case cache      // 缓存目录
@@ -17,7 +17,7 @@ enum SandboxDirectory: String, CaseIterable {
 }
 
 // MARK: - 自定义沙盒操作错误
-enum SandboxError: LocalizedError {
+public enum SandboxError: LocalizedError {
     case invalidPath              // 无效路径
     case fileDoesNotExist         // 文件/文件夹不存在
     case notAFile                 // 路径不是文件
@@ -44,7 +44,7 @@ enum SandboxError: LocalizedError {
 }
 
 // MARK: - 沙盒操作工具类（单例模式）
-final class JY_SandboxManager {
+public final class JY_SandboxManager {
     // 单例实例
     static let shared = JY_SandboxManager()
     private init() {} // 私有化初始化，防止外部创建
@@ -364,7 +364,7 @@ final class JY_SandboxManager {
 }
 
 // MARK: - 扩展：字节大小格式化（方便阅读）
-extension Int64 {
+public extension Int64 {
     func formattedFileSize() -> String {
         let formatter = ByteCountFormatter()
         formatter.allowedUnits = [.useBytes, .useKB, .useMB, .useGB, .useTB]
@@ -375,7 +375,7 @@ extension Int64 {
 
 
 // MARK: - 扩展：字节大小格式化（强制英文输出，完全手动实现，兼容 iOS13+ / iOS16）
-extension Int64 {
+public extension Int64 {
     func yq_formattedFileSize() -> String {
         // 单位数组：仅保留 MB、GB、TB（最小单位为 MB）
         let englishUnits = ["MB", "GB", "TB"]

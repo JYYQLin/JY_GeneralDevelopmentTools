@@ -88,7 +88,7 @@ public enum Language: String, CaseIterable {
     }
 }
 
-extension Notification.Name {
+public extension Notification.Name {
     static let JY_LanguageDidChangeNotification = Notification.Name("JY_LocalizationManager + JY_LanguageDidChangeNotification")
 }
 

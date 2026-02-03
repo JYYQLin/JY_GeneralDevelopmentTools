@@ -8,7 +8,7 @@
 import Foundation
 
 /// JSON处理工具类（iOS开发通用）
-final class JY_JSONUtils {
+public final class JY_JSONUtils {
     
     // MARK: - 私有化构造器，禁止实例化
     private init() {}
@@ -16,7 +16,7 @@ final class JY_JSONUtils {
 }
 
 // MARK: - 类型转JSON字符串
-extension JY_JSONUtils {
+public extension JY_JSONUtils {
     /// 【单独方法】将[String: Any]转为JSON字符串（满足需求1）
     /// - Parameter dict: 字典对象（需符合JSON序列化规则）
     /// - Parameter prettyPrinted: 是否格式化输出（默认false，紧凑格式）
@@ -53,7 +53,7 @@ extension JY_JSONUtils {
 }
 
 // MARK: - JSON字符串转对象
-extension JY_JSONUtils {
+public extension JY_JSONUtils {
     /// 将JSON字符串转成[String: Any]字典（需求6）
     /// - Parameter jsonString: JSON格式字符串
     /// - Returns: 可选字典对象（失败返回nil）
@@ -86,7 +86,7 @@ extension JY_JSONUtils {
 }
 
 // MARK: - 扩展：iOS开发常用JSON辅助方法
-extension JY_JSONUtils {
+public extension JY_JSONUtils {
     
     /// JSON字符串转指定模型（Codable）- iOS开发高频场景
     /// - Parameters:
@@ -118,7 +118,7 @@ extension JY_JSONUtils {
     }
 }
 
-extension JY_JSONUtils {
+public extension JY_JSONUtils {
     /// 格式化JSON字符串（便于调试）
     /// - Parameter jsonString: 原始JSON字符串
     /// - Returns: 格式化后的字符串（失败返回原字符串）
