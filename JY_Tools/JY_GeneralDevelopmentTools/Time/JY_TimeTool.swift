@@ -14,7 +14,7 @@ public final class JY_TimeTool {
     
     /// 获取当前秒级时间戳（Int类型）
     /// - Returns: 秒级时间戳
-    static func currentTimestamp() -> Int {
+    @objc public static func currentTimestamp() -> Int {
         // timeIntervalSince1970 返回的是Double类型（带毫秒），取整后得到秒级时间戳
         return Int(Date().timeIntervalSince1970)
     }
