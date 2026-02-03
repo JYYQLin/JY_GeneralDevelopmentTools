@@ -11,21 +11,21 @@ import Combine
 import ImageIO
 
 // 图片格式枚举
-enum ImageFormat: String {
+public enum ImageFormat: String {
     case png = "png"
     case jpeg = "jpeg"
     case heic = "heic"
 }
 
 // 图片保存进度
-enum SaveProgress {
+public enum SaveProgress {
     case preparing
     case writing(Double) // 0.0...1.0
     case completed
 }
 
 // MARK: - 图片沙盒管理工具类
-final class JY_ImageSandboxManager {
+public final class JY_ImageSandboxManager {
     // 单例实例
     static let shared = JY_ImageSandboxManager()
     private init() {}
@@ -286,7 +286,7 @@ final class JY_ImageSandboxManager {
 }
 
 // MARK: - Combine版本方法
-extension JY_ImageSandboxManager {
+public extension JY_ImageSandboxManager {
     /// Combine版本：保存图片到沙盒
     func saveImage(
         _ image: UIImage,
