@@ -67,7 +67,7 @@ extension JY_PhoneTextField {
             yq_bgImageView.frame.size = bounds.size
             yq_bgImageView.layer.cornerRadius = yq_bgImageView.frame.height * 0.5
             yq_bgImageView.layer.masksToBounds = true
-            yq_bgImageView.backgroundColor = UIColor.colorFEFDFE
+            yq_bgImageView.backgroundColor = UIColor.yq_color(hexString: "0xFEFDFE")
             return bounds.origin
         }()
         
@@ -79,8 +79,8 @@ extension JY_PhoneTextField {
             
             yq_textField.keyboardType = .phonePad
             
-            yq_textField.textColor = UIColor.color424242
-            yq_textField.placeholderColor = UIColor.colorBDBDBD
+            yq_textField.textColor = UIColor.yq_color(hexString: "0x424242")
+            yq_textField.placeholderColor = UIColor.yq_color(hexString: "0xBDBDBD")
             
             yq_textField.clearButtonMode = .whileEditing
             

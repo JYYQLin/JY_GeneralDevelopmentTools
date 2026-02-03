@@ -79,10 +79,10 @@ extension JYClipImageRatioCell {
             yq_title_label.frame.size = CGSize(width: contentView.frame.width, height: 13 * yq_scale)
             yq_title_label.font = UIFont.yq_pingfang_sc(12 * yq_scale)
             yq_title_label.textAlignment = .center
-            yq_title_label.layer.shadowColor = UIColor.color010101.withAlphaComponent(0.3).cgColor
+            yq_title_label.layer.shadowColor = UIColor.yq_color(hexString: "0x010101").withAlphaComponent(0.3).cgColor
             yq_title_label.layer.shadowOffset = .zero
             yq_title_label.layer.shadowOpacity = 1
-            yq_title_label.textColor = yq_is_selected == true ? UIColor.colorFAFAFB : UIColor.yq_color(red: 160, green: 160, blue: 160)
+            yq_title_label.textColor = yq_is_selected == true ? UIColor.yq_color(hexString: "0xFAFAFB") : UIColor.yq_color(red: 160, green: 160, blue: 160)
             return CGPoint(x: 0, y: contentView.frame.height - yq_title_label.frame.height)
         }()
     }

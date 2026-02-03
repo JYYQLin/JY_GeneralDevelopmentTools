@@ -99,7 +99,7 @@ extension JYClipImageController {
     override func yq_layoutSubviews() {
         super.yq_layoutSubviews()
                 
-        view.backgroundColor = UIColor.color010101
+        view.backgroundColor = UIColor.yq_color(hexString: "0x010101")
         
         yq_bottom_navigationBar.frame.origin = {
             

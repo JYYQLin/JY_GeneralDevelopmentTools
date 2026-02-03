@@ -71,7 +71,7 @@ extension JYClipImageToolView {
         yq_reduction_button.frame.origin = {
             yq_reduction_button.frame.size = CGSize(width: 44 * yq_scale, height: frame.height)
             yq_reduction_button.setTitle("还原", for: .normal)
-            yq_reduction_button.setTitleColor(UIColor.colorFAFAFB, for: .normal)
+            yq_reduction_button.setTitleColor(UIColor.yq_color(hexString: "0xFAFAFB"), for: .normal)
             yq_reduction_button.titleLabel?.font = UIFont.yq_pingfang_sc_medium(13 * yq_scale)
             
             return CGPoint(x: frame.width - yq_reduction_button.frame.width, y: (frame.height - yq_reduction_button.frame.height) * 0.5)

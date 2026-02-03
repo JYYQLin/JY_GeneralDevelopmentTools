@@ -13,8 +13,8 @@ class JY_ContentTextView_TextCount: JY_View {
     
     private lazy var yq_placeholder: String = "请填写您的反馈意见或问题，每一条我们都会认真查看（\(yq_max_text_count)字以内）"
     private(set) lazy var yq_max_text_count: Int = 500
-    private lazy var yq_bg_color: UIColor = UIColor.colorFEFDFE
-    private lazy var yq_tip_text_color: UIColor = UIColor.color9E9E9E
+    private lazy var yq_bg_color: UIColor = UIColor.yq_color(hexString: "0xFEFDFE")
+    private lazy var yq_tip_text_color: UIColor = UIColor.yq_color(hexString: "0x9E9E9E")
     
     var text: String {
         get {
@@ -107,7 +107,7 @@ extension JY_ContentTextView_TextCount {
     
     private func yq_tip_label_frame() {
         yq_tip_label.font = UIFont.yq_din_alternate(13 * yq_scale)
-        yq_tip_label.textColor = text.count > yq_max_text_count ? UIColor.colorFF2442 :  yq_tip_text_color
+        yq_tip_label.textColor = text.count > yq_max_text_count ? UIColor.yq_color(hexString: "0xFF2442") :  yq_tip_text_color
         yq_tip_label.text = "\(text.count)/\(yq_max_text_count)"
         yq_tip_label.sizeToFit()
         yq_tip_label.isHidden = yq_max_text_count <= 0
@@ -118,8 +118,8 @@ extension JY_ContentTextView_TextCount {
         yq_textView.frame.size = CGSize(width: frame.width - 16 * yq_scale * 2, height: yq_tip_label.frame.minY - 12 * yq_scale * 2)
         
         yq_textView.font = UIFont.yq_pingfang_sc(14 * yq_scale)
-        yq_textView.textColor = UIColor.color212121
-        yq_textView.placeholderColor = UIColor.color9E9E9E
+        yq_textView.textColor = UIColor.yq_color(hexString: "0x212121")
+        yq_textView.placeholderColor = UIColor.yq_color(hexString: "0x9E9E9E")
         
         yq_textView.placeholder = yq_placeholder
         

@@ -46,7 +46,7 @@ extension JY_Base_MineCell {
     public func yq_title_label_frame() {
         yq_title_label.frame.origin = {
             yq_title_label.font = UIFont.yq_pingfang_sc(13 * yq_scale)
-            yq_title_label.textColor = UIColor.color424242
+            yq_title_label.textColor = UIColor.yq_color(hexString: "0x424242")
             yq_title_label.sizeToFit()
             return CGPoint(x: yq_icon_imageView.frame.maxX + 15 * yq_scale, y: (contentView.frame.height - yq_title_label.frame.height) * 0.5)
         }()

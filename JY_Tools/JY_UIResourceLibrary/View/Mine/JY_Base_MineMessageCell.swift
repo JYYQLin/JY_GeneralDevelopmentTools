@@ -43,7 +43,7 @@ extension JY_Base_MineMessageCell {
     
     private func yq_message_count_label_frame() {
         yq_message_count_label.font = UIFont.yq_pingfang_tc_bold(12 * yq_scale)
-        yq_message_count_label.textColor = UIColor.colorFAFAFB
+        yq_message_count_label.textColor = UIColor.yq_color(hexString: "0xFAFAFB")
         yq_message_count_label.sizeToFit()
     }
     
@@ -55,7 +55,7 @@ extension JY_Base_MineMessageCell {
         yq_message_count_bgImageView.frame.size = CGSize(width: width > height ? width : height, height: height)
         yq_message_count_bgImageView.layer.cornerRadius = yq_message_count_bgImageView.frame.height * 0.5
         yq_message_count_bgImageView.layer.masksToBounds = true
-        yq_message_count_bgImageView.backgroundColor = UIColor.color4CBAFF
+        yq_message_count_bgImageView.backgroundColor = UIColor.yq_color(hexString: "0x4CBAFF")
         
         yq_message_count_bgImageView.frame.origin = CGPoint(x: yq_arrow_imageView.frame.minX - yq_message_count_bgImageView.frame.width - 6 * yq_scale, y: yq_arrow_imageView.frame.midY - yq_message_count_bgImageView.frame.height * 0.5)
         

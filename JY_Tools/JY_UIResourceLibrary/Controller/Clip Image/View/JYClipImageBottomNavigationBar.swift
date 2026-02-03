@@ -50,7 +50,7 @@ extension JYClipImageBottomNavigationBar {
         yq_cancel_button.frame.origin = {
             yq_cancel_button.frame.size = CGSize(width: frame.height, height: frame.height)
             yq_cancel_button.setTitle("取消", for: .normal)
-            yq_cancel_button.setTitleColor(UIColor.colorFAFAFB, for: .normal)
+            yq_cancel_button.setTitleColor(UIColor.yq_color(hexString: "0xFAFAFB"), for: .normal)
             yq_cancel_button.titleLabel?.font = UIFont.yq_pingfang_sc_medium(13 * yq_scale)
             
             return CGPoint(x: 5 * yq_scale, y: (frame.height - yq_cancel_button.frame.height) * 0.5)
@@ -59,7 +59,7 @@ extension JYClipImageBottomNavigationBar {
         yq_done_button.frame.origin = {
             yq_done_button.frame.size = CGSize(width: frame.height, height: frame.height)
             yq_done_button.setTitle("确定", for: .normal)
-            yq_done_button.setTitleColor(UIColor.colorFAFAFB, for: .normal)
+            yq_done_button.setTitleColor(UIColor.yq_color(hexString: "0xFAFAFB"), for: .normal)
             yq_done_button.titleLabel?.font = UIFont.yq_pingfang_sc_medium(13 * yq_scale)
             
             return CGPoint(x: frame.width - yq_done_button.frame.width - yq_cancel_button.frame.minX, y: yq_cancel_button.frame.midY - yq_done_button.frame.height * 0.5)

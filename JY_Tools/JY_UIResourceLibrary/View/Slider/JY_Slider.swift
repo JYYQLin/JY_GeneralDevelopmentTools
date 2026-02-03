@@ -15,9 +15,9 @@ class JY_Slider: JY_View {
 
     private lazy var progressView: UIProgressView = UIProgressView()
     
-    private lazy var sliderColor: UIColor = UIColor.colorE85022
-    private lazy var progressTintColor: UIColor = UIColor.colorE85022
-    private lazy var progressTrackTintColor: UIColor = UIColor.colorFEFDFE.withAlphaComponent(0.75)
+    private lazy var sliderColor: UIColor = UIColor.yq_color(hexString: "0xE85022")
+    private lazy var progressTintColor: UIColor = UIColor.yq_color(hexString: "0xE85022")
+    private lazy var progressTrackTintColor: UIColor = UIColor.yq_color(hexString: "0xFEFDFE").withAlphaComponent(0.75)
     
     var sliderChangeBlock: ((_ progress: Float) -> Void)?
     var sliderCancelBlock: (() -> Void)?

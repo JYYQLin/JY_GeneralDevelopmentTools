@@ -19,7 +19,7 @@ class JYClipOverlayView: JY_View {
     //  背景
     private lazy var yq_shadow_view: JY_View = {
         let view = JY_View()
-        view.backgroundColor = UIColor.color010101.withAlphaComponent(0.65)
+        view.backgroundColor = UIColor.yq_color(hexString: "0x010101").withAlphaComponent(0.65)
         view.layer.mask = yq_shadow_mask_layer
         return view
     }()
