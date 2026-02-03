@@ -131,7 +131,7 @@ final class JY_TipHUD: JY_View {
     private lazy var titleLabel: JY_Label = {
         let label = JY_Label()
         label.font = UIFont.systemFont(ofSize: 13)
-        label.textColor = .colorFAFAFB
+        label.textColor = UIColor.yq_color(hexString: "0xFAFAFB")
         label.numberOfLines = 0
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -194,12 +194,12 @@ final class JY_TipHUD: JY_View {
     // MARK: - 样式配置（简化 + 可扩展）
     /// 成功背景色
     class func successBgColor() -> UIColor {
-        return .color4DC56C
+        return UIColor.yq_color(hexString: "0x4DC56C")
     }
     
     /// 失败/危险背景色
     class func dangerBgColor() -> UIColor {
-        return .colorFF4B3B
+        return UIColor.yq_color(hexString: "0xFF4B3B")  
     }
     
     // MARK: - 动画逻辑（优化内存 + 适配自定义导航栏高度）
