@@ -47,8 +47,8 @@ extension JY_ScreenManager {
  最后取平均值 = 1.58
  
  */
-let yq_max_phone_scale: CGFloat = (440 / 375.0)
-let yq_max_scale: CGFloat = 1.58
+public let yq_max_phone_scale: CGFloat = (440 / 375.0)
+public let yq_max_scale: CGFloat = 1.58
 
 extension UIScreen {
     //  屏幕宽度

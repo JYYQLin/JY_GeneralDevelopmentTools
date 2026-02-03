@@ -6,7 +6,7 @@
 //
 
 //  MARK: 翻页模式
-enum JY_PageTurningMode: Int {
+public enum JY_PageTurningMode: Int {
     /**  仿真 */
     case simulation = 0
     /**  左右滑动 */
@@ -30,7 +30,7 @@ enum JY_PageTurningMode: Int {
 }
 
 //  MARK: 行距
-enum JY_LineSpacing: Int {
+public enum JY_LineSpacing: Int {
     
     /** 标准 */
     case standard = 15
