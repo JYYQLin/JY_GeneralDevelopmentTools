@@ -89,50 +89,50 @@ extension UIDevice {
 // MARK: - 设备参数模型（替代原元组，增加类型安全）
 public struct JY_DeviceType: Equatable {
     /// 屏幕宽（竖屏，pt）
-    let width: CGFloat
+    public let width: CGFloat
     /// 屏幕高（竖屏，pt）
-    let height: CGFloat
+    public let height: CGFloat
     
     /// 竖屏状态栏高度（iOS 26前）
-    let statusBarHeightPortrait: CGFloat
+    public let statusBarHeightPortrait: CGFloat
     /// 竖屏导航栏高度（iOS 26前）
-    let navBarHeightPortrait: CGFloat
+    public let navBarHeightPortrait: CGFloat
     /// 横屏状态栏高度（iOS 26前）
-    let statusBarHeightLandscape: CGFloat
+    public let statusBarHeightLandscape: CGFloat
     /// 横屏导航栏高度（iOS 26前）
-    let navBarHeightLandscape: CGFloat
+    public let navBarHeightLandscape: CGFloat
     
     /// 竖屏状态栏高度（iOS 26及以后）
-    let statusBarHeightPortraitiOS26Later: CGFloat
+    public let statusBarHeightPortraitiOS26Later: CGFloat
     /// 竖屏导航栏高度（iOS 26及以后）
-    let navBarHeightPortraitiOS26Later: CGFloat
+    public let navBarHeightPortraitiOS26Later: CGFloat
     /// 横屏状态栏高度（iOS 26及以后）
-    let statusBarHeightLandscapeiOS26Later: CGFloat
+    public let statusBarHeightLandscapeiOS26Later: CGFloat
     /// 横屏导航栏高度（iOS 26及以后）
-    let navBarHeightLandscapeiOS26Later: CGFloat
+    public let navBarHeightLandscapeiOS26Later: CGFloat
     
     /// 竖屏标签栏高度（iOS 26前）
-    let tabBarHeightPortrait: CGFloat
+    public let tabBarHeightPortrait: CGFloat
     /// 横屏标签栏高度（iOS 26前）
-    let tabBarHeightLandscape: CGFloat
+    public let tabBarHeightLandscape: CGFloat
     
     /// 竖屏标签栏高度（iOS 26及以后）
-    let tabBarHeightPortraitiOS26Later: CGFloat
+    public let tabBarHeightPortraitiOS26Later: CGFloat
     /// 横屏标签栏高度（iOS 26及以后）
-    let tabBarHeightLandscapeiOS26Later: CGFloat
+    public let tabBarHeightLandscapeiOS26Later: CGFloat
     
     /// 屏幕缩放比
-    let screenScale: CGFloat
+    public let screenScale: CGFloat
     /// 是否全面屏
-    let isFullScreen: Bool
+    public let isFullScreen: Bool
     /// 是否灵动岛设备
-    let isDynamicIsland: Bool
+    public let isDynamicIsland: Bool
     /// 设备名称（如iPhone 11）
-    let deviceName: String
+    public let deviceName: String
     /// 设备原始型号列表（如["iPhone12,1"]）
-    let modelIdentifiers: [String]
+    public let modelIdentifiers: [String]
     /// 是否平板
-    let isPad: Bool
+    public let isPad: Bool
     
     // MARK: - 便捷获取当前系统版本对应的实际高度
     /// 当前系统竖屏状态栏高度

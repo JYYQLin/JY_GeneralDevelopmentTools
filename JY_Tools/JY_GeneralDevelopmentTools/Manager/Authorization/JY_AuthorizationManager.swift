@@ -1,5 +1,5 @@
 //
-//  JY_JY_AuthorizationManager.swift
+//  JY_AuthorizationManager.swift
 //  JY_GeneralDevelopmentTools
 //
 //  Created by JYYQLin on 2025/12/24.

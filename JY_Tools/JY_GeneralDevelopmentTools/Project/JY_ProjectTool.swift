@@ -35,7 +35,7 @@ public final class JY_ProjectTool { // 核心修改1：添加@objc，保证OC混
     }
     
     /// 获取当前BundleID（修复笔误：原getBundleIDdentifier多了一个d）
-    @objc public static func getBundleIdentifier() -> String {
+    @objc public static func getBundleIDdentifier() -> String {
         // 优化：移除强制解包，改用可选绑定，避免崩溃
         guard let bundleIdentifier = infoDictionary?["CFBundleIdentifier"] as? String else {
             return "命名空间错误"
@@ -89,7 +89,7 @@ public final class JY_ProjectTool { // 核心修改1：添加@objc，保证OC混
         return "\(version)（\(build)）"
     }
     
-    /// 6. Bundle ID（应用唯一标识，如com.xxx.jizhangzhu）- 与getBundleIdentifier功能一致，保留做兼容
+    /// 6. Bundle ID（应用唯一标识，如com.xxx.jizhangzhu）- 与getBundleIDdentifier功能一致，保留做兼容
     @objc public static func getBundleID() -> String {
         Bundle.main.bundleIdentifier ?? "unknown.bundle.id"
     }
@@ -152,7 +152,7 @@ public extension JY_ProjectTool {
 // MARK: - 三、App生命周期（首次启动/安装/更新）
 public extension JY_ProjectTool {
     /// 1. 是否是App首次启动（冷启动，卸载重装后重置）
-    @objc public static func isFirstLaunch() -> Bool {
+    @objc static func isFirstLaunch() -> Bool {
         guard !userDefaults.bool(forKey: firstLaunchKey) else { return false }
         userDefaults.set(true, forKey: firstLaunchKey)
         userDefaults.set(Date().timeIntervalSince1970, forKey: installTimeKey) // 记录安装时间
@@ -162,12 +162,12 @@ public extension JY_ProjectTool {
     }
     
     /// 2. 获取App安装时间（秒级时间戳，首次启动时记录）
-    @objc public static func getInstallTime() -> TimeInterval {
+    @objc static func getInstallTime() -> TimeInterval {
         userDefaults.double(forKey: installTimeKey)
     }
     
     /// 3. 是否是版本更新后首次启动（如从1.0.0升级到1.0.1）
-    @objc public static func isFirstLaunchAfterUpdate() -> Bool {
+    @objc static func isFirstLaunchAfterUpdate() -> Bool {
         let lastVersion = userDefaults.string(forKey: lastVersionKey) ?? ""
         let currentVersion = getAppVersion()
         guard lastVersion != currentVersion else { return false }

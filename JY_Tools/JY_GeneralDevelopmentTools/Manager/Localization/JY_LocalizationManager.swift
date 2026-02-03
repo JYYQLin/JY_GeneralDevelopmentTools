@@ -1,5 +1,5 @@
 //
-//  JY_JY_LocalizationManager.swift
+//  JY_LocalizationManager.swift
 //  JY_GeneralDevelopmentTools
 //
 //  Created by JYYQLin on 2025/12/24.
@@ -36,7 +36,7 @@ public enum Language: String, CaseIterable {
     
     // MARK: - 扩展：获取语言显示名称（解耦硬编码）
     /// 获取语言的本地化显示名称
-    var displayName: String {
+    public var displayName: String {
         switch self {
         case .english: return "English"
         case .englishAustralia: return "English（Australia）"
@@ -56,7 +56,7 @@ public enum Language: String, CaseIterable {
         }
     }
     
-    var intValue: Int {
+    public var intValue: Int {
         switch self {
         case .english: return 1
         case .englishAustralia: return 1
@@ -80,7 +80,7 @@ public enum Language: String, CaseIterable {
     }
     
     /// 从原始值安全初始化（兜底返回简体中文）
-    static func safeInit(rawValue: String?) -> Language {
+    public static func safeInit(rawValue: String?) -> Language {
         guard let rawValue = rawValue, let language = Language(rawValue: rawValue) else {
             return .chineseSimplified
         }

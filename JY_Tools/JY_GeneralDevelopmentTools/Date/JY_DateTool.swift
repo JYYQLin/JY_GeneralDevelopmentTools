@@ -238,10 +238,10 @@ public final class JY_DateTool {
 // MARK: - 新增：秒数拆分结果模型
 /// 存储天、时、分、秒的组件模型
 public struct TimeIntervalComponents {
-    let days: Int
-    let hours: Int
-    let minutes: Int
-    let seconds: Int
+    public let days: Int
+    public let hours: Int
+    public let minutes: Int
+    public let seconds: Int
 }
 
 // MARK: 新增方法 1 - 时间戳差值计算
