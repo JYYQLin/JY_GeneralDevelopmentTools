@@ -8,9 +8,11 @@
 import UIKit
 
 /// 通用加载提示HUD（单例模式，线程安全）
-final class JY_LoadingHUD: UIView {
+// 核心修改1：添加public，开放跨模块访问；final保留（禁止继承，单例工具类无需继承）
+public final class JY_LoadingHUD: UIView {
     // MARK: - 单例
-    static let shared = JY_LoadingHUD()
+    // 核心修改2：添加public，外部可通过JY_LoadingHUD.shared访问单例
+    public static let shared = JY_LoadingHUD()
     
     // MARK: - 全屏遮罩View（避免和系统maskView冲突）
     private lazy var jy_maskView: UIView = {
@@ -23,27 +25,28 @@ final class JY_LoadingHUD: UIView {
     
     // MARK: - 可配置属性（支持全局自定义）
     /// 加载指示器颜色（默认白色）
-    var indicatorColor: UIColor = .white {
+    // 核心修改3：所有对外可配置属性添加public，支持外部自定义
+    public var indicatorColor: UIColor = .white {
         didSet {
             activityIndicator.color = indicatorColor
         }
     }
     
     /// 提示文字颜色（默认白色）
-    var textColor: UIColor = .white {
+    public var textColor: UIColor = .white {
         didSet {
             textLabel.textColor = textColor
         }
     }
     
     /// 遮罩View背景色（默认透明）
-    var maskBackgroundColor: UIColor {
+    public var maskBackgroundColor: UIColor {
         get { jy_maskView.backgroundColor ?? .clear }
         set { jy_maskView.backgroundColor = newValue }
     }
     
     /// 遮罩View透明度（快捷修改，基于backgroundColor的alpha）
-    var maskAlpha: CGFloat {
+    public var maskAlpha: CGFloat {
         get { jy_maskView.backgroundColor?.cgColor.alpha ?? 0.0 }
         set {
             let currentColor = jy_maskView.backgroundColor ?? .clear
@@ -52,21 +55,21 @@ final class JY_LoadingHUD: UIView {
     }
     
     /// 容器背景色（默认黑色半透明）
-    var containerColor: UIColor = UIColor.black.withAlphaComponent(0.7) {
+    public var containerColor: UIColor = UIColor.black.withAlphaComponent(0.7) {
         didSet {
             containerView.backgroundColor = containerColor
         }
     }
     
     /// 遮罩层是否可点击（兼容原有属性，实际由jy_maskView拦截）
-    var maskIsUserInteractionEnabled: Bool = false {
+    public var maskIsUserInteractionEnabled: Bool = false {
         didSet {
             jy_maskView.isUserInteractionEnabled = !maskIsUserInteractionEnabled
         }
     }
     
     /// 容器圆角（默认10pt）
-    var containerCornerRadius: CGFloat = 10 {
+    public var containerCornerRadius: CGFloat = 10 {
         didSet {
             containerView.layer.cornerRadius = containerCornerRadius
             containerView.clipsToBounds = true
@@ -110,16 +113,13 @@ final class JY_LoadingHUD: UIView {
     }()
     
     // MARK: - 关键约束（动态切换）
-    /// 指示器顶部约束（有文字时激活）
     private var indicatorTopConstraint: NSLayoutConstraint!
-    /// 指示器居中约束（无文字时激活）
     private var indicatorCenterYConstraint: NSLayoutConstraint!
-    /// 文字标签高度约束（无文字时设为0）
     private var textLabelHeightConstraint: NSLayoutConstraint!
-    /// 文字标签顶部约束（有文字时激活）
     private var textLabelTopConstraint: NSLayoutConstraint!
     
     // MARK: - 初始化
+    // 私有初始化：单例模式核心，保持不变
     private override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -132,17 +132,14 @@ final class JY_LoadingHUD: UIView {
     
     // MARK: - UI布局
     private func setupUI() {
-        // HUD自身透明，不拦截交互
         backgroundColor = .clear
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
         
-        // 添加子视图
         addSubview(containerView)
         containerView.addSubview(activityIndicator)
         containerView.addSubview(textLabel)
         
-        // 容器视图基础约束（居中，最小宽高）
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -150,14 +147,12 @@ final class JY_LoadingHUD: UIView {
             containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80)
         ])
         
-        // 指示器基础约束（居中X）
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             activityIndicator.widthAnchor.constraint(equalToConstant: 40),
             activityIndicator.heightAnchor.constraint(equalToConstant: 40)
         ])
         
-        // 文字标签基础约束（左右间距）
         NSLayoutConstraint.activate([
             textLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
             textLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
@@ -167,60 +162,51 @@ final class JY_LoadingHUD: UIView {
     
     // MARK: - 动态约束配置（核心：根据文字切换布局）
     private func setupDynamicConstraints() {
-        // 1. 指示器顶部约束（有文字时激活）
         indicatorTopConstraint = activityIndicator.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20)
         indicatorTopConstraint.priority = .defaultHigh
         
-        // 2. 指示器居中Y约束（无文字时激活）
         indicatorCenterYConstraint = activityIndicator.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
         indicatorCenterYConstraint.priority = .required
-        indicatorCenterYConstraint.isActive = false // 默认禁用
+        indicatorCenterYConstraint.isActive = false
         
-        // 3. 文字标签顶部约束（有文字时激活）
         textLabelTopConstraint = textLabel.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: 10)
-        textLabelTopConstraint.isActive = false // 默认禁用
+        textLabelTopConstraint.isActive = false
         
-        // 4. 文字标签高度约束（无文字时设为0）
         textLabelHeightConstraint = textLabel.heightAnchor.constraint(equalToConstant: 0)
         textLabelHeightConstraint.priority = .required
-        textLabelHeightConstraint.isActive = true // 默认激活（无文字时高度0）
+        textLabelHeightConstraint.isActive = true
     }
     
     // MARK: - 布局切换方法（根据文字是否为空）
     private func updateLayout(withText text: String?) {
         let hasText = text != nil && !text!.isEmpty
         
-        // 1. 切换文字标签状态
         textLabel.isHidden = !hasText
-        textLabelHeightConstraint.isActive = !hasText // 无文字时高度0，有文字时取消高度限制
-        textLabelTopConstraint.isActive = hasText     // 有文字时激活顶部约束
+        textLabelHeightConstraint.isActive = !hasText
+        textLabelTopConstraint.isActive = hasText
         
-        // 2. 切换指示器约束
-        indicatorTopConstraint.isActive = hasText       // 有文字时：指示器靠上
-        indicatorCenterYConstraint.isActive = !hasText  // 无文字时：指示器居中
+        indicatorTopConstraint.isActive = hasText
+        indicatorCenterYConstraint.isActive = !hasText
         
-        // 3. 刷新布局
         containerView.layoutIfNeeded()
     }
     
     // MARK: - 公开方法
     /// 显示纯加载动画的HUD（无文字）
-    func show() {
+    // 核心修改4：所有对外调用方法添加public，支持外部模块调用
+    public func show() {
         show(withText: nil)
     }
     
     /// 显示带文字的HUD
     /// - Parameter text: 提示文字（nil则隐藏文字标签）
-    func show(withText text: String?) {
+    public func show(withText text: String?) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
-            // 修复核心：重新启动指示器动画
             self.activityIndicator.startAnimating()
             
-            // 避免重复显示
             guard self.jy_maskView.superview == nil else {
-                // 更新文字和布局
                 if let text = text {
                     self.textLabel.text = text
                 }
@@ -228,16 +214,13 @@ final class JY_LoadingHUD: UIView {
                 return
             }
             
-            // 配置文字
             self.textLabel.text = text
-            // 切换布局（核心）
             self.updateLayout(withText: text)
             
             guard let keyWindow = UIWindow.yq_firstWindow() else {
                 return
             }
             
-            // 添加遮罩View并设置约束
             keyWindow.addSubview(self.jy_maskView)
             keyWindow.bringSubviewToFront(self.jy_maskView)
             NSLayoutConstraint.activate([
@@ -247,7 +230,6 @@ final class JY_LoadingHUD: UIView {
                 self.jy_maskView.bottomAnchor.constraint(equalTo: keyWindow.bottomAnchor)
             ])
             
-            // 添加HUD到遮罩View并设置约束
             self.jy_maskView.addSubview(self)
             NSLayoutConstraint.activate([
                 self.leadingAnchor.constraint(equalTo: self.jy_maskView.leadingAnchor),
@@ -256,7 +238,6 @@ final class JY_LoadingHUD: UIView {
                 self.bottomAnchor.constraint(equalTo: self.jy_maskView.bottomAnchor)
             ])
             
-            // 显示动画
             self.alpha = 0
             self.containerView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             UIView.animate(withDuration: 0.25) {
@@ -268,7 +249,7 @@ final class JY_LoadingHUD: UIView {
     
     /// 隐藏HUD
     /// - Parameter animated: 是否开启动画（默认true）
-    func hide(animated: Bool = true) {
+    public func hide(animated: Bool = true) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self, self.jy_maskView.superview != nil else { return }
             
@@ -294,7 +275,7 @@ final class JY_LoadingHUD: UIView {
     /// - Parameters:
     ///   - delay: 延迟时间（秒）
     ///   - animated: 是否开启动画（默认true）
-    func hide(afterDelay delay: TimeInterval, animated: Bool = true) {
+    public func hide(afterDelay delay: TimeInterval, animated: Bool = true) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
             self?.hide(animated: animated)
         }
@@ -302,7 +283,8 @@ final class JY_LoadingHUD: UIView {
 }
 
 // MARK: - 便捷调用扩展（简化使用）
-extension JY_LoadingHUD {
+// 核心修改5：添加public，开放扩展的跨模块访问，内部方法继承public无需额外修饰
+public extension JY_LoadingHUD {
     static func show() {
         shared.show()
     }

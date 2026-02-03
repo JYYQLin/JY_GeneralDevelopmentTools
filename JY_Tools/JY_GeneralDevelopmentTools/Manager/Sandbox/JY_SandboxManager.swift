@@ -46,7 +46,7 @@ public enum SandboxError: LocalizedError {
 // MARK: - 沙盒操作工具类（单例模式）
 public final class JY_SandboxManager {
     // 单例实例
-    static let shared = JY_SandboxManager()
+    public static let shared = JY_SandboxManager()
     private init() {} // 私有化初始化，防止外部创建
     
     // 文件管理器

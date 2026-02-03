@@ -64,7 +64,7 @@ public final class JY_NetworkManager {
     }()
     
     // Combine发布者（仅状态真变化时更新）
-    @Published private(set) var networkStatus: JYNetworkStatus = .defaultDisconnected
+    @Published var networkStatus: JYNetworkStatus = .defaultDisconnected
     
     // 对外只读的Publisher（双重去重：模型对比 + 主线程）
     var networkStatusPublisher: AnyPublisher<JYNetworkStatus, Never> {

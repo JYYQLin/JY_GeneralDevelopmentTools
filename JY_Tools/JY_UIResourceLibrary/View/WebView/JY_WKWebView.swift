@@ -77,7 +77,7 @@ extension JY_WKWebView {
 }
 
 extension JY_WKWebView {
-    func set(url: String) {
+    public func set(url: String) {
         urlString = url
         
         guard let url1 = URL(string: urlString) else {
