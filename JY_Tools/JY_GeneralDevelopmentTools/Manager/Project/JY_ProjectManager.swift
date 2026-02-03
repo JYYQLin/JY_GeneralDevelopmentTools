@@ -13,7 +13,7 @@ public class JY_ProjectManager {
     public static let shared = JY_ProjectManager()
     
     /** 是否是测试环境 */
-    private(set) lazy var is_test_environment: Bool = false
+    public lazy var is_test_environment: Bool = false
     
     // 私有初始化方法，防止外部创建实例
     private init() { /**  print("Singleton 初始化") */ }

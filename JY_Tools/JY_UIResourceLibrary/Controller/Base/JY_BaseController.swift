@@ -172,20 +172,20 @@ public extension JY_BaseController {
     }
 }
 
-public extension JY_BaseController {
-    @objc func yq_show_loadingView() {
+extension JY_BaseController {
+    @objc open func yq_show_loadingView() {
         yq_contentView.isHidden = true
         yq_status_contentView.isHidden = true
         yq_loading_contentView.isHidden = false
     }
     
-    @objc func yq_show_contentView() {
+    @objc open func yq_show_contentView() {
         yq_loading_contentView.isHidden = true
         yq_contentView.isHidden = false
         yq_status_contentView.isHidden = true
     }
     
-    @objc func yq_show_statusView() {
+    @objc open func yq_show_statusView() {
         yq_contentView.isHidden = true
         yq_status_contentView.isHidden = false
         yq_loading_contentView.isHidden = true

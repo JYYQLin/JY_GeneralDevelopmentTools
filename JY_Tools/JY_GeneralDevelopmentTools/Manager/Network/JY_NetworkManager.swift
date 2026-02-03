@@ -30,13 +30,13 @@ public enum JYConnectionType: CustomStringConvertible {
 
 // MARK: - 网络状态模型（Equatable 保证精准对比）
 public struct JYNetworkStatus: Equatable {
-    let connectionType: JYConnectionType
-    let isExpensive: Bool       // 是否是昂贵网络（蜂窝/热点等）
-    let isConstrained: Bool     // 是否受低数据模式限制
-    let isConnected: Bool       // 是否有网络连接
+    public let connectionType: JYConnectionType
+    public let isExpensive: Bool       // 是否是昂贵网络（蜂窝/热点等）
+    public let isConstrained: Bool     // 是否受低数据模式限制
+    public let isConnected: Bool       // 是否有网络连接
     
     // 日志友好的描述
-    var logDescription: String {
+    public var logDescription: String {
         """
         [网络状态更新]
         - 连接状态：\(isConnected ? "已连接" : "未连接")
@@ -47,7 +47,7 @@ public struct JYNetworkStatus: Equatable {
     }
     
     // 简化默认值初始化
-    static let defaultDisconnected = JYNetworkStatus(
+    public static let defaultDisconnected = JYNetworkStatus(
         connectionType: .notConnected,
         isExpensive: false,
         isConstrained: false,

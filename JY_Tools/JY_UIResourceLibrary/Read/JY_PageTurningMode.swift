@@ -18,7 +18,7 @@ public enum JY_PageTurningMode: Int {
     /**  覆盖 */
     case cover = 4
     
-    var title: String {
+    public var title: String {
         switch self {
         case .simulation: return "仿真翻页"
         case .pageLeftToRight: return "左右翻页"
