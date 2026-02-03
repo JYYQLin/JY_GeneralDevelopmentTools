@@ -8,7 +8,7 @@
 import UIKit
 
 //  MARK: 字符串提取
-extension String {
+public extension String {
     /// 提取URL中最后一个斜杠后的部分
     /// - Returns: 最后一个路径组件，如果没有斜杠则返回原始字符串
     func lastPathComponent() -> String {
@@ -44,7 +44,7 @@ extension String {
 }
 
 //  MARK: 手机号脱敏
-extension String {
+public extension String {
     /// 手机号脱敏：中间四位替换为****（适配11位手机号，非11位返回原字符串）
     /// - Parameter filterNonDigit: 是否过滤非数字字符（默认true，如处理"138-1234-5678"这类格式）
     /// - Returns: 脱敏后的手机号字符串
@@ -85,7 +85,7 @@ import UIKit
 import Foundation
 
 // MARK: - String 核心扩展
-extension String {
+public extension String {
     // MARK: 1. 高亮指定文字数组，生成富文本
     /**
      高亮指定文字数组，生成带颜色的富文本
@@ -268,7 +268,7 @@ extension String {
 }
 
 // MARK: - NSAttributedString 核心扩展
-extension NSAttributedString {
+public extension NSAttributedString {
     // MARK: 额外1. 快速修改行间距
     /**
      修改富文本的行间距
@@ -361,7 +361,7 @@ extension NSAttributedString {
     }
 }
 
-extension String {
+public extension String {
     /// 计算文字尺寸（适配单行/多行，自动处理像素取整）
     /// - Parameters:
     ///   - font: 文字字体（必填，包含字号+字体样式，默认系统字体17号）

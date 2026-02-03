@@ -10,7 +10,7 @@ import Accelerate
 import MobileCoreServices
 
 //  MARK: 生成虚线
-extension UIImage {
+public extension UIImage {
     /// 虚线方向枚举（简化命名）
     enum DashDirection {
         case horizontal  // 水平虚线
@@ -161,7 +161,7 @@ extension UIImage {
 //  MARK: 生成圆角图片
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     /// 生成纯色圆角图片
     /// - Parameters:
     ///   - color: 图片填充颜色（UIColor，支持透明色）
@@ -217,7 +217,7 @@ extension UIImage {
 }
 
 // MARK: - 渐变方向枚举（对应你需要的四种方向，清晰无歧义）
-enum GradientDirection {
+public enum GradientDirection {
     case topToBottom  // 从上到下
     case leftToRight  // 从左到右
     case leftTopToRightBottom // 从左上到右下
@@ -225,7 +225,7 @@ enum GradientDirection {
 }
 
 // MARK: - 图片生成工具（可直接放在UIImage扩展中，方便调用）
-extension UIImage {
+public extension UIImage {
     /// 生成渐变圆角图片
     /// - Parameters:
     ///   - colors: 渐变颜色数组（不可为空，若为空返回空图片）
@@ -311,7 +311,7 @@ extension UIImage {
 //  MARK: 压缩图片大小
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     /// 将图片压缩到指定KB大小（优先JPEG压缩，PNG无损则转JPEG）
     /// - Parameters:
     ///   - targetSizeInKB: 目标大小（单位：KB，需>0）
@@ -470,7 +470,7 @@ extension UIImage {
 //  MARK: 压缩图片尺寸
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     /// 将图片压缩到指定尺寸（核心方法）
     /// - Parameters:
     ///   - targetSize: 目标尺寸（宽高需>0）
@@ -568,7 +568,7 @@ extension UIImage {
 import UIKit
 import Photos // 核心框架：处理相册权限/保存
 
-extension UIImage {
+public extension UIImage {
     /// 保存图片到系统相册（核心方法）
     /// - Parameters:
     ///   - completion: 保存结果回调（主线程执行）
@@ -638,7 +638,7 @@ extension UIImage {
 }
 
 // MARK: - 私有辅助方法：相册权限检查/请求
-extension UIImage {
+public extension UIImage {
     /// 检查并请求相册「添加」权限（iOS 14+ 区分添加/读取，保存仅需添加权限）
     private func checkPhotoLibraryPermission(completion: @escaping (_ granted: Bool, _ error: Error?) -> Void) {
         guard #available(iOS 14.0, *) else {
@@ -701,7 +701,7 @@ extension UIImage {
 // MARK: - UIImage 渲染/裁剪/旋转扩展
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     
     // MARK: 核心渲染方法 - 封装 UIGraphicsImageRenderer 实现图片绘制
     /**
