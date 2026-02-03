@@ -15,7 +15,7 @@ public enum JY_ControllerState: CustomStringConvertible {
     case showLoading
     /** 显示状态 */
     case showStatus
-
+    
     public var description: String {
         switch self {
         case .yq_default: "默认状态"
@@ -39,11 +39,11 @@ open class JY_BaseController: UIViewController {
     /** 控制器状态 */
     public private(set) var yq_status: JY_ControllerState = .yq_default
     open func set(status: JY_ControllerState) {
-         if yq_status != status {
-             yq_status = status
-             yq_controllerStatusChange()
-         }
-     }
+        if yq_status != status {
+            yq_status = status
+            yq_controllerStatusChange()
+        }
+    }
     
     private func yq_controllerStatusChange() {
         if yq_status == .showLoading {
@@ -62,11 +62,11 @@ open class JY_BaseController: UIViewController {
     /** 控制器 - 缩放比例 */
     public private(set) var yq_scale: CGFloat = 1.0
     open func set(scale: CGFloat) {
-         if yq_scale != scale {
-             yq_scale = scale
-             yq_layoutSubviews()
-         }
-     }
+        if yq_scale != scale {
+            yq_scale = scale
+            yq_layoutSubviews()
+        }
+    }
     
     //  MARK: 控制器 - 基础界面
     /** 内容容器 */
@@ -86,7 +86,7 @@ open class JY_BaseController: UIViewController {
 }
 
 //  MARK: 生命周期
-extension JY_BaseController {
+public extension JY_BaseController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,11 +94,11 @@ extension JY_BaseController {
         yq_setNavigationBar()
     }
     
-//    override open func viewWillLayoutSubviews() {
-//        super.viewWillLayoutSubviews()
-//
-//        setSubviewsFrame()
-//    }
+    //    override open func viewWillLayoutSubviews() {
+    //        super.viewWillLayoutSubviews()
+    //
+    //        setSubviewsFrame()
+    //    }
     
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -112,13 +112,13 @@ extension JY_BaseController {
     }
 }
 
-extension JY_BaseController {
+public extension JY_BaseController {
     @objc dynamic open func yq_retry_request_click() {
         set(status: .showLoading)
     }
 }
 
-extension JY_BaseController {
+public extension JY_BaseController {
     public func yq_request_loading_addSubview(_ view: UIView) {
         for subView in yq_loading_contentView.subviews {
             subView.removeFromSuperview()
@@ -136,7 +136,7 @@ extension JY_BaseController {
     }
 }
 
-extension JY_BaseController {
+public extension JY_BaseController {
     @objc dynamic open func yq_setInterface() {
         
         view.addSubview(yq_backgroundView)
@@ -167,12 +167,12 @@ extension JY_BaseController {
         
         yq_status_contentView.frame = view.bounds
         yq_status_contentView.set(scale: yq_scale)
-                
+        
         yq_leftTapView.frame = CGRect(x: 0, y: UIDevice.current.navigationBarMaxY(), width: 15 * yq_scale, height: view.frame.height - UIDevice.current.navigationBarMaxY())
     }
 }
 
-extension JY_BaseController {
+public extension JY_BaseController {
     @objc func yq_show_loadingView() {
         yq_contentView.isHidden = true
         yq_status_contentView.isHidden = true
@@ -192,13 +192,13 @@ extension JY_BaseController {
     }
 }
 
-extension JY_BaseController {
+public extension JY_BaseController {
     class func yq_ID() -> String {
         let name = ("\(self)" + "\(#function)")
         return name.yq_sha256()
     }
     
     var className: String {
-           return String(describing: type(of: self))
-       }
+        return String(describing: type(of: self))
+    }
 }

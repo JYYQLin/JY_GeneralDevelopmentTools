@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class JY_WKWebView: JY_View {
+open class JY_WKWebView: JY_View {
     
     public var urlString: String = ""
     
@@ -57,7 +57,7 @@ class JY_WKWebView: JY_View {
 }
 
 extension JY_WKWebView {
-    override func yq_add_subviews() {
+    open override func yq_add_subviews() {
         super.yq_add_subviews()
         
         addSubview(wkWebView)
@@ -66,7 +66,7 @@ extension JY_WKWebView {
 }
 
 extension JY_WKWebView {
-    override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         
         wkWebView.frame = bounds
@@ -93,13 +93,13 @@ extension JY_WKWebView {
 // MARK: - WKNavigationDelegate（监听加载状态和进度）
 extension JY_WKWebView: WKNavigationDelegate {
     /// 开始加载网页
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         progressView.isHidden = false
         progressView.setProgress(0.0, animated: false)
     }
     
     /// 实时更新加载进度
-    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         // 监听estimatedProgress的KVO（也可以用闭包监听，这里用KVO更经典）
         webView.addObserver(self,
                             forKeyPath: "estimatedProgress",
@@ -108,7 +108,7 @@ extension JY_WKWebView: WKNavigationDelegate {
     }
     
     /// 加载完成
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         // 进度条动画到100%后隐藏
         UIView.animate(withDuration: 0.3, animations: {
             self.progressView.setProgress(1.0, animated: true)
@@ -121,7 +121,7 @@ extension JY_WKWebView: WKNavigationDelegate {
     }
     
     /// 加载失败
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
 //        showLoadError(message: "网页加载失败：\(error.localizedDescription)")
         progressView.isHidden = true
         progressView.setProgress(0.0, animated: false)
@@ -129,7 +129,7 @@ extension JY_WKWebView: WKNavigationDelegate {
     }
     
     // MARK: - KVO监听进度
-    override func observeValue(forKeyPath keyPath: String?,
+    open override func observeValue(forKeyPath keyPath: String?,
                                of object: Any?,
                                change: [NSKeyValueChangeKey : Any]?,
                                context: UnsafeMutableRawPointer?) {
