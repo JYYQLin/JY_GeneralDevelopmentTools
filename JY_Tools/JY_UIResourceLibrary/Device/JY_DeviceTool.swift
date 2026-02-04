@@ -13,11 +13,11 @@ public final class JY_DeviceTool {
     // MARK: - 私有化构造器，禁止实例化
     private init() {}
     
-    static func isIPhone() -> Bool {
+    public static func isIPhone() -> Bool {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
     
-    static func isIPad() -> Bool {
+    public static func isIPad() -> Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
 }
